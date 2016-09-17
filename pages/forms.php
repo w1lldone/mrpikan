@@ -391,113 +391,42 @@
                                             <p class="help-block">contoh : 12 februari 2016 = 021216</p>
                                         </div>
                                         <div class="form-group">
-                                            <label>Nelayan</label>
-<?php 
-
-	
-?>											
-                                            <select class="form-control" name="kategori">
-												<option value="sumarji">Sumarji</option>
-												<option value="Suharno">Suharno</option>
+                                            <label>Nelayan</label>							
+                                            <select class="form-control" name="kategori">							
 											<?php 
-												while ($a<5) {
-													echo "<option value='$a'>$a</option>";
-													$a++;
-												} ?>
-											
+											include"config.php";
+											$sql="select * from nelayan";
+											$q=mysql_query($sql) or die(mysql_error());
+											while ($row=mysql_fetch_array($q)){
+												echo"<option value='$row[idn]'>$row[nama]</option>";
+											}?>									
 											</select>	
                                         </div>
-                                        <div class="form-group">
-                                            <label>Static Control</label>
-                                            <p class="form-control-static">email@example.com</p>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">Rp</span>
+                                            <input type="text" class="form-control" placeholder="Biaya Nelayan">
+                                            <span class="input-group-addon">.00</span>
                                         </div>
-                                        <div class="form-group">
-                                            <label>File input</label>
-                                            <input type="file">
+										 <div class="form-group">
+                                            <label>Pengepul</label>							
+                                            <select class="form-control" name="kategori">							
+											<?php 											
+											$sql2="select * from pengepul";
+											$q2=mysql_query($sql2) or die(mysql_error());
+											while ($row2=mysql_fetch_array($q2)){
+												echo"<option value='$row2[idpg]'>$row2[nama]</option>";
+											}?>									
+											</select>	
                                         </div>
-                                        <div class="form-group">
-                                            <label>Text area</label>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">Rp</span>
+                                            <input type="text" class="form-control" placeholder="Biaya Pengepul">
+                                            <span class="input-group-addon">.00</span>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Checkboxes</label>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 1
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 2
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">Checkbox 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Checkboxes</label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">1
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">2
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Radio Buttons</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio 1
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio 2
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio 3
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Radio Buttons</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>1
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">2
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline3" value="option3">3
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Selects</label>
-                                            <select class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Multiple Selects</label>
-                                            <select multiple class="form-control">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+										<label>Volume</label>
+										<div class="form-group input-group">											
+                                            <input type="text" class="form-control" name="vol">
+                                            <span class="input-group-addon">Kg</span>
                                         </div>
                                         <button type="submit" class="btn btn-default">Submit Button</button>
                                         <button type="reset" class="btn btn-default">Reset Button</button>
