@@ -806,7 +806,7 @@ include "data.php";
                     echo grafikTotalTgl("tanggal, avg(hr2)");
                     ?>,     
                     xkey: 'tanggal',
-                    ykeys: ['avg(hr3)'],
+                    ykeys: ['avg(hr2)'],
                     xLabels: 'day',
                     labels: ['Harga Ikan'],        
                     behaveLikeLine: true
@@ -819,7 +819,7 @@ include "data.php";
                     echo grafik("select tanggal, hr2 from rata where idsk = $_GET[vol] order by tanggal desc ");
                     ?>,     
                     xkey: 'tanggal',
-                    ykeys: ['hr3'],
+                    ykeys: ['hr2'],
                     xLabels: 'day',
                     labels: ['Harga Ikan'],        
                     behaveLikeLine: true

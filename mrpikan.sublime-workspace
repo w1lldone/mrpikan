@@ -180,6 +180,14 @@
 			}
 		},
 		{
+			"file": "margin.php",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "transaksi2.php",
 			"settings":
 			{
@@ -230,7 +238,7 @@
 			"file": "password.php",
 			"settings":
 			{
-				"buffer_size": 32,
+				"buffer_size": 39,
 				"line_ending": "Windows"
 			}
 		},
@@ -507,7 +515,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -537,7 +545,7 @@
 						"translation.y": 113.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -567,7 +575,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -596,7 +604,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -612,8 +620,8 @@
 						"selection":
 						[
 							[
-								40038,
-								40809
+								39836,
+								39836
 							]
 						],
 						"settings":
@@ -623,10 +631,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11285.0,
+						"translation.y": 11890.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -656,7 +664,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -672,8 +680,8 @@
 						"selection":
 						[
 							[
-								10509,
-								10509
+								12906,
+								12906
 							]
 						],
 						"settings":
@@ -683,10 +691,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3120.0,
+						"translation.y": 3990.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -716,7 +724,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -746,7 +754,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -776,7 +784,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -806,7 +814,7 @@
 						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -836,7 +844,7 @@
 						"translation.y": 845.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -865,7 +873,7 @@
 						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -894,11 +902,40 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 13,
+					"file": "margin.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "transaksi2.php",
 					"semi_transient": false,
 					"settings":
@@ -924,11 +961,11 @@
 						"translation.y": 275.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "insert.php",
 					"semi_transient": false,
 					"settings":
@@ -952,11 +989,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "/D/Kuliah/Semester 3/Asisten Instruktur Penkom/PRESENTASI PRAKTIKUM PK/ACARA2/FILE MATLAB/programA1.m",
 					"semi_transient": false,
 					"settings":
@@ -980,11 +1017,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "/D/Kuliah/Semester 3/Asisten Instruktur Penkom/PRESENTASI PRAKTIKUM PK/ACARA2/FILE MATLAB/ProgramA2.m",
 					"semi_transient": false,
 					"settings":
@@ -1008,11 +1045,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1036,24 +1073,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "password.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32,
+						"buffer_size": 39,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29,
-								29
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1064,11 +1101,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "bower_components/bootstrap/dist/css/bootstrap.min.edit.css",
 					"semi_transient": false,
 					"settings":
@@ -1092,11 +1129,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "css/freelancer.min.css",
 					"semi_transient": false,
 					"settings":
@@ -1120,7 +1157,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 21,
 					"type": "text"
 				}
 			]
