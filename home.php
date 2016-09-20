@@ -24,6 +24,9 @@
     <!-- Morris Charts CSS -->
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/font.css" rel="stylesheet" type="text/css">
@@ -262,35 +265,140 @@ include "data.php";
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#trenggalek" class="portfolio-link" data-toggle="modal">
-                        <img src="img/icon/trenggalek.jpg" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-anchor fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPN</div>
+                                    <p>Prigi Trenggalek</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#trenggalek"  data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#lamongan" class="portfolio-link" data-toggle="modal">
-                        <img src="img/icon/lamongan.jpg" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-globe fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPN</div>
+                                    <p>Brondong Lamongan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#lamongan" data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#cilacap" class="portfolio-link" data-toggle="modal">
-                        <img src="img/icon/cilacap.jpg" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPS</div>
+                                    <p>Cilacap</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#cilacap" data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
+            </div>
+
+             <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-anchor fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPN</div>
+                                    <p>Ratu Sukabumi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#portfolioModal3"  data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-globe fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPP</div>
+                                    <p>Sadeng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">PPN</div>
+                                    <p>Pekalongan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" data-toggle="modal">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -544,6 +652,7 @@ include "data.php";
 
     <?php include "modal.php"; 
           include 'gbr_umum.php';
+          include 'pelabuhan.php';
     ?>
 
     <!-- jQuery -->
