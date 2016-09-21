@@ -71,8 +71,12 @@ include "data.php";
                     <li class="page-scroll">
                         <a href="#portfolio">Galeri</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#pelabuhan">About</a>
+                    <li class="dropdown page-scroll">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li class="page-scroll"><a href="#about">Perikanan Tangkap</a></li>
+                        <li class="page-scroll"><a href="#pelabuhan">Pelabuhan</a></li>
+                      </ul>
                     </li>
                     <li class="dropdown page-scroll">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grafik <span class="caret"></span></a>
@@ -347,7 +351,7 @@ include "data.php";
                                 </div>
                             </div>
                         </div>
-                        <a href="#portfolioModal3"  data-toggle="modal">
+                        <a href="#sukabumi"  data-toggle="modal">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -369,7 +373,7 @@ include "data.php";
                                 </div>
                             </div>
                         </div>
-                        <a href="#" data-toggle="modal">
+                        <a href="#sadeng" data-toggle="modal">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -391,7 +395,7 @@ include "data.php";
                                 </div>
                             </div>
                         </div>
-                        <a href="#" data-toggle="modal">
+                        <a href="#pekalongan" data-toggle="modal">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

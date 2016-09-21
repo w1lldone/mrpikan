@@ -79,7 +79,7 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 35684,
+				"buffer_size": 36080,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,7 +95,7 @@
 			"file": "pelabuhan.php",
 			"settings":
 			{
-				"buffer_size": 12524,
+				"buffer_size": 23160,
 				"line_ending": "Windows"
 			}
 		},
@@ -108,14 +108,6 @@
 			{
 				"buffer_size": 12623,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
-			"settings":
-			{
-				"buffer_size": 15809,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -190,12 +182,12 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
 		"/D/xampp/htdocs/mrpikan/gbr_umum.php",
 		"/D/xampp/htdocs/mrpikan/modal.php",
 		"/C/Users/Wild One/Desktop/karakteristik pelabuhan.htm",
 		"/D/xampp/htdocs/mrpikan/transaksi1.php",
 		"/D/xampp/htdocs/mrpikan/tabel_pk.php",
-		"/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
 		"/D/xampp/htdocs/mrpikan/home.php",
 		"/D/xampp/htdocs/mrpikan/isi.php",
 		"/D/xampp/htdocs/mrpikan/tabel_pd.php",
@@ -395,7 +387,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -404,15 +396,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35684,
+						"buffer_size": 36080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15107,
-								15107
+								2781,
+								2781
 							]
 						],
 						"settings":
@@ -422,10 +414,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5241.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -464,15 +456,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12524,
+						"buffer_size": 23160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10509,
-								10509
+								20125,
+								20125
 							]
 						],
 						"settings":
@@ -482,10 +474,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2646.0,
+						"translation.y": 5511.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -520,40 +512,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15809,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								659,
-								659
-							],
-							[
-								7301,
-								9335
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"semi_transient": false,
 					"settings":
 					{
@@ -576,7 +534,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
