@@ -3,7 +3,6 @@
 	$idsk=$_POST['sektor'];
 	include"data.php";
 	$hpd=$_POST['hg_jual']/$_POST['vol'];
-	include 'data.php';
 	if($_GET['act']=='input'){
 	mysql_query("INSERT INTO transaksi2(tanggal, idsk, idpd, idpk, h2, v3)
 	VALUES(
