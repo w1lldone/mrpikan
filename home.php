@@ -44,6 +44,7 @@
 </head>
 <?php
 include "data.php";
+include 'news.php';
 ?>
 
 <body id="page-top" class="index">
@@ -100,64 +101,68 @@ include "data.php";
          <!-- Carousel -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="img/slide1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">               
-              <img class="img-responsive" src="img/fish-logo.png" alt=""> 
-              <h1>Sistem Informasi Perikanan Tangkap</h1>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a href="#portfolioModal5" class="btn btn-lg btn-primary portfolio-link" data-toggle="modal">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                  <img class="first-slide" src="img/slide1.jpg" alt="First slide">
+                  <div class="container">
+                    <div class="carousel-caption">               
+                      <img class="img-responsive" src="img/fish-logo.png" alt=""> 
+                      <h1>Sistem Informasi Perikanan Tangkap</h1>
+                    </div>
+                  </div>
+                </div> <!-- item -->
+
+                <div class="item">
+                  <img class="second-slide" src="img/news/1.jpg" alt="Second slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <h1>Basmi Pencurian Ikan, Kini RI Jadi Eksportir Terbesar ke Jepang</h1>
+                      <p>Keinginan pemerintah melalui Kementerian Kelautan dan Perikanan (KKP) untuk membasmi pencurian ikan membuahkan hasil.</p>
+                      <p><a href="#news1" class="btn btn-lg btn-primary portfolio-link" data-toggle="modal">Learn more</a></p>
+                    </div>
+                  </div>
+                </div> <!-- item -->
+
+                <div class="item">
+                  <img class="third-slide" src="img/news/2.jpg" alt="Third slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <h1>Sejuta Nelayan Bakal Diasuransikan</h1>
+                      <p>Kementerian Kelautan dan Perikanan (KKP) terus memberikan dukungan bagi tumbuh kembangnya sektor kelautan dan perikanan. Untuk itu, pihaknya menggagas program asuransi satu juta nelayan pada tahun depan.</p>
+                      <p><a href="#news2" class="btn btn-lg btn-primary portfolio-link" data-toggle="modal">Learn more</a></p>
+                    </div>
+                  </div>
+                </div> <!-- item -->
+
+                <div class="item">
+                  <img class="fourth-slide" src="img/news/3.jpg" alt="Fourth slide">
+                  <div class="container">
+                    <div class="carousel-caption">
+                      <h1>Pemerintah Siap Bangun 58 Unit <em>Cold Storage</em></h1>
+                      <p>Kementerian Kelautan dan Perikanan (KKP) siap merogoh dana sebesar Rp 220 miliar untuk membangun 58 unit rantai pendingin makanan (cold storage) di 22 provinsi sepanjang tahun ini.</p>
+                      <p><a href="#news3" class="btn btn-lg btn-primary portfolio-link" data-toggle="modal">Learn more</a></p>
+                    </div>
+                  </div>
+                </div> <!-- item -->
+
+          </div> <!-- carousel inner -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
     </div><!-- /.carousel -->
 
-        <!--<div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/fish-logo.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Perikanan Nusantara</span>
-                        <hr class="star-light">
-                        <span class="skills">Sistem Informasi Perikanan Tangkap Nusantara</span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </header>
 
    
@@ -188,7 +193,7 @@ include "data.php";
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                        <img src="img/2.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -198,7 +203,7 @@ include "data.php";
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                        <img src="img/3.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -208,7 +213,7 @@ include "data.php";
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
+                        <img src="img/4.jpg" class="img-responsive" alt="" width="900" height="650">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -218,7 +223,7 @@ include "data.php";
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
+                        <img src="img/5.jpg" class="img-responsive" alt=""  width="900" height="650">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -228,7 +233,7 @@ include "data.php";
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+                        <img src="img/6.jpg" class="img-responsive" alt=""  width="900" height="650">
                     </a>
                 </div>
             </div>

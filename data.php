@@ -10,6 +10,7 @@
 		}
 		
 	}
+
 	function grafikTotalTgl($data){
 		$q=mysql_query("select distinct tanggal from rata") or die(mysql_error());
 		while ($row=mysql_fetch_array($q)){			
@@ -25,6 +26,7 @@
 		return json_encode($hasil);
 		
 	}
+	
 	function grafik($query){
 		$qq=mysql_query($query) or die(mysql_error());
 		$counts=mysql_num_rows($qq);		
