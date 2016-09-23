@@ -66,4 +66,16 @@
 					pm_pd=$pm_pd
 					where idpm=1");	
 	}
+
+	function cekrata(){
+		$sql="select * from rata";
+		$q=mysql_query($sql) or die(mysql_error());
+		while ($row=mysql_fetch_array($q)) {
+			$jumlah = 0;
+			$jumlah = $row['vr1']+$row['vr3']+$row['vr4'];
+			if ($jumlah==0) {
+				mysql_query("delete from rata where idr = $row[idr]");
+			}
+		}
+	}
 ?>

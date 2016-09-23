@@ -4,8 +4,20 @@
 		"selected_items":
 		[
 			[
+				"null",
+				"null"
+			],
+			[
+				"isn",
+				"is_null"
+			],
+			[
+				"P",
+				"persenr"
+			],
+			[
 				"incl",
-				"incl	include …"
+				"incl\tinclude …"
 			],
 			[
 				"mysql_",
@@ -13,7 +25,7 @@
 			],
 			[
 				"op",
-				"option	Tag"
+				"option\tTag"
 			],
 			[
 				"function",
@@ -21,7 +33,7 @@
 			],
 			[
 				"in",
-				"input	Tag"
+				"input\tTag"
 			],
 			[
 				"sess",
@@ -29,11 +41,11 @@
 			],
 			[
 				"i",
-				"if	if …"
+				"if\tif …"
 			],
 			[
 				"ac",
-				"action	Attr"
+				"action\tAttr"
 			],
 			[
 				"jso",
@@ -45,7 +57,7 @@
 			],
 			[
 				"inlc",
-				"incl	include …"
+				"incl\tinclude …"
 			],
 			[
 				"tim",
@@ -53,7 +65,7 @@
 			],
 			[
 				"di",
-				"div	Tag"
+				"div\tTag"
 			],
 			[
 				"sc",
@@ -69,7 +81,7 @@
 			],
 			[
 				"main",
-				"main	main"
+				"main\tmain"
 			]
 		]
 	},
@@ -79,23 +91,57 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 36102,
+				"buffer_size": 36088,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "gbr_umum.php",
+			"file": "input2.php",
 			"settings":
 			{
-				"buffer_size": 9323,
+				"buffer_size": 1326,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "databaseeeee/mrp_ikan struktur data.sql",
+			"file": "input1.php",
 			"settings":
 			{
-				"buffer_size": 18368,
+				"buffer_size": 1873,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "input3.php",
+			"settings":
+			{
+				"buffer_size": 1525,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "hapus.php",
+			"settings":
+			{
+				"buffer_size": 2816,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Wild One/Desktop/Acara 3/programB1.m",
+			"settings":
+			{
+				"buffer_size": 239,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "data.php",
+			"settings":
+			{
+				"buffer_size": 2232,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -112,6 +158,7 @@
 			"settings":
 			{
 				"buffer_size": 23160,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -194,10 +241,11 @@
 	},
 	"expanded_folders":
 	[
-		"/D/xampp/htdocs/mrpikan"
 	],
 	"file_history":
 	[
+		"/D/xampp/htdocs/mrpikan/pages/index.html",
+		"/D/xampp/htdocs/mrpikan/databaseeeee/mrp_ikan struktur data.sql",
 		"/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
 		"/D/xampp/htdocs/mrpikan/gbr_umum.php",
 		"/D/xampp/htdocs/mrpikan/modal.php",
@@ -230,7 +278,6 @@
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap.min.css",
 		"/D/xampp/htdocs/mrpikan/input3.php",
 		"/D/xampp/htdocs/mrpikan/logout.php",
-		"/D/xampp/htdocs/mrpikan/pages/index.html",
 		"/D/xampp/htdocs/mrpikan/js/morris-data.js",
 		"/D/xampp/htdocs/mrpikan/js/flot-data.js",
 		"/D/xampp/htdocs/mrpikan/css/bootstrap.min.css",
@@ -314,6 +361,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"br1",
+			"'$_POST[tanggal]'",
+			"$_POST[tanggal]",
 			"pelabuhan",
 			"include",
 			"caption",
@@ -390,6 +440,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'$tanggal'",
+			"$tanggal",
 			"avg(hr2)",
 			"avg(hr1)",
 			"rowa"
@@ -403,7 +455,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -412,15 +464,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36102,
+						"buffer_size": 36088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7494,
-								7494
+								517,
+								517
 							]
 						],
 						"settings":
@@ -430,49 +482,135 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2160.0,
+						"translation.y": 12720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "input2.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1108,
+								1205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 462.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "input1.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1582,
+								1582
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1137.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "input3.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "gbr_umum.php",
-					"semi_transient": true,
+					"buffer": 4,
+					"file": "hapus.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9323,
+						"buffer_size": 2816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2276,
+								2276
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7072.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "databaseeeee/mrp_ikan struktur data.sql",
+					"buffer": 5,
+					"file": "/C/Users/Wild One/Desktop/Acara 3/programB1.m",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18368,
+						"buffer_size": 239,
 						"regions":
 						{
 						},
@@ -485,9 +623,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Objective-C/Objective-C.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -497,7 +633,36 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
+					"file": "data.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2105,
+								2105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "modul.php",
 					"semi_transient": false,
 					"settings":
@@ -520,14 +685,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2155.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
 					"file": "pelabuhan.php",
 					"semi_transient": false,
 					"settings":
@@ -553,11 +718,11 @@
 						"translation.y": 1440.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "modal.php",
 					"semi_transient": false,
 					"settings":
@@ -580,14 +745,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 480.0,
+						"translation.y": 1405.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 10,
 					"semi_transient": false,
 					"settings":
 					{
@@ -610,7 +775,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -655,7 +820,7 @@
 	"project": "mrpikan.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
