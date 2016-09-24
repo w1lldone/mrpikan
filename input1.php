@@ -28,6 +28,7 @@
 			where idt1=$_POST[idt1]");
 	}// act edit
 		
+		//begin update tabel rata
 		$br1=hasil("select avg(b1) from transaksi1 where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
 		$br2=hasil("select avg(b2) from transaksi1 where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
 		$persenr=hasil("select avg(persen) from transaksi1 where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
@@ -53,7 +54,9 @@
 				persen=$persenr 
 				where tanggal='$_POST[tanggal]' and idsk='$_POST[sektor]'");	
 		}
+		// end update tabel rata
 
+		//update margin
 		margin();
 
 		echo "<script>window.alert('data tersimpan');

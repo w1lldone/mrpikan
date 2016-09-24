@@ -1,4 +1,5 @@
 <?php
+	//config.php fungsinya menghubungkan php dengan database mysql
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass="";

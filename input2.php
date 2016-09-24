@@ -24,7 +24,7 @@
 			where idt2=$_POST[id]");
 	}// act edit
 
-
+	//begin update rata
 	$hr2=hasil("select avg(h2) from transaksi2 where tanggal = '$_POST[tanggal]' and idsk=$idsk");
 	$vr3=hasil("select sum(v3) from transaksi2 where tanggal = '$_POST[tanggal]' and idsk=$idsk");
 		
@@ -41,7 +41,9 @@
 	} else{
 		mysql_query("update rata set hr2=$hr2, vr3=$vr3 where tanggal='$_POST[tanggal]' and idsk=$idsk");	
 	}
+	//end update rata
 	
+	//update margin
 	margin();
 
 	echo "<script>window.alert('data tersimpan');

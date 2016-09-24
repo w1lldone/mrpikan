@@ -1,4 +1,6 @@
 <?php
+// data.php adalah kumpulan function yg sering dipanggil
+
 	include "config.php";
 	$hasil=null;
 	function hasil($query){
@@ -69,6 +71,7 @@
 					where idpm=1");	
 	}
 
+	//menghapus rata yg kosong
 	function cekrata(){
 		$sql="select * from rata";
 		$q=mysql_query($sql) or die(mysql_error());

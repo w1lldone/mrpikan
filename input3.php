@@ -24,6 +24,7 @@
 			where idl=$_POST[id]");
 	}// act edit
 
+		//begin update rata
 		$br3=hasil("select avg(b3) from laporan where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
 		$hr3=hasil("select avg(h3) from laporan where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
 		$vr4=hasil("select sum(vol) from laporan where tanggal = '$_POST[tanggal]' and idsk = $_POST[sektor]");
@@ -45,7 +46,9 @@
 				vr4=$vr4
 				where tanggal='$_POST[tanggal]' and idsk='$_POST[sektor]'");	
 		}
+		//end update rata
 
+		//update margin
 		margin();
 
 		echo "<script>window.alert('data tersimpan');

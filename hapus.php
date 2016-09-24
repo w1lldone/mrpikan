@@ -2,13 +2,16 @@
 	include 'data.php';
 	session_start();
 	if ($_GET['tabel']=='tabel1'){
+		//ngecek hak akses (harus tpi)
 		if ($_SESSION['pref']=='tpi') {
-
+			//ambil nilai tanggal dan sektor
 			$tanggal=hasil("select tanggal from transaksi1 where idt1 = $_GET[id]");
 			$sektor=hasil("select idsk from transaksi1 where idt1 = $_GET[id]");
 			
+			//hapus data
 			mysql_query("delete from transaksi1 where idt1 = $_GET[id]");
 
+			//begin update rata
 			$br1=hasil("select avg(b1) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor");
 			if ($br1==null) {
 				$br1=0;
@@ -33,6 +36,7 @@
 					persen=$persenr 
 					where tanggal='$tanggal' and idsk= $sektor");
 		}
+		//end update rata
 
 		echo "<script>window.alert('data terhapus');
 		window.location=('modul.php?isi=tabel1')</script>";

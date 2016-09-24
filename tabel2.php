@@ -47,7 +47,7 @@
 												echo"<td>$row[v3]</td>";?>												
 												    <td class="text-center">
                                                     <a href="modul.php?isi=input2&act=edit&id=<?php echo $row['idt2'] ?>"><button type="button" class="btn btn-info">Edit</button> 
-                                                    <a href="hapus.php?tabel=tabel2&id=<?php echo $row['idt2'] ?>"><button type="button" class="btn btn-danger">Hapus</button></a></td>                      
+                                                    <a href="hapus.php?tabel=tabel2&id=<?php echo $row['idt2'] ?>" onclick="return confirm('Anda Yakin?')"><button type="button" class="btn btn-danger">Hapus</button></a></td>                      
                                        <?php } ?>
                                     </tbody>
                                 </table>
