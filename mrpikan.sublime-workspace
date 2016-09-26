@@ -91,7 +91,26 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 36088,
+				"buffer_size": 36631,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1518,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "news.php",
+			"settings":
+			{
+				"buffer_size": 10898,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -99,7 +118,8 @@
 			"file": "input2.php",
 			"settings":
 			{
-				"buffer_size": 1326,
+				"buffer_size": 1382,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -107,7 +127,8 @@
 			"file": "input1.php",
 			"settings":
 			{
-				"buffer_size": 1873,
+				"buffer_size": 1946,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -115,24 +136,36 @@
 			"file": "input3.php",
 			"settings":
 			{
-				"buffer_size": 1525,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "hapus.php",
-			"settings":
-			{
-				"buffer_size": 2816,
+				"buffer_size": 1585,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Wild One/Desktop/Acara 3/programB1.m",
+			"contents": "<?php\n\tinclude 'data.php';\n\tsession_start();\n\tif ($_GET['tabel']=='tabel1'){\n\t\t//ngecek hak akses (harus tpi)\n\t\tif ($_SESSION['pref']=='tpi') {\n\t\t\t//ambil nilai tanggal dan sektor\n\t\t\t$tanggal=hasil(\"select tanggal from transaksi1 where idt1 = $_GET[id]\");\n\t\t\t$sektor=hasil(\"select idsk from transaksi1 where idt1 = $_GET[id]\");\n\t\t\t\n\t\t\t//hapus data\n\t\t\tmysql_query(\"delete from transaksi1 where idt1 = $_GET[id]\");\n\n\t\t\t//begin update rata (lihat input1.php)\n\t\t\t$br1=hasil(\"select avg(b1) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br1==null) {\n\t\t\t\t$br1=0;\n\t\t\t}\n\t\t\t$br2=hasil(\"select avg(b2) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br2==null) {\n\t\t\t\t$br2=0;\n\t\t\t}\n\t\t\t$persenr=hasil(\"select avg(persen) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($persenr==null) {\n\t\t\t\t$persenr=0;\n\t\t\t}\n\t\t\t$volt=hasil(\"select sum(vol) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($volt==null) {\n\t\t\t\t$volt=0;\n\t\t\t}\n\n\t\t\tmysql_query(\"update rata set \n\t\t\t\t\tbr1=$br1, \n\t\t\t\t\tbr2=$br2,\n\t\t\t\t\tvr1=$volt, \n\t\t\t\t\tpersen=$persenr \n\t\t\t\t\twhere tanggal='$tanggal' and idsk= $sektor\");\n\t\t}\n\t\t//end update rata\n\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel1')</script>\";\n\t}\n\n\tif ($_GET['tabel']=='tabel2'){\n\t\tif ($_SESSION['pref']=='tpi') {\n\n\t\t\t$tanggal=hasil(\"select tanggal from transaksi2 where idt2 = $_GET[id]\");\n\t\t\t$sektor=hasil(\"select idsk from transaksi2 where idt2 = $_GET[id]\");\n\n\t\t\tmysql_query(\"delete from transaksi2 where idt2 = $_GET[id]\");\n\n\t\t\t$hr2=hasil(\"select avg(h2) from transaksi2 where tanggal = '$tanggal' and idsk=$sektor\");\n\t\t\tif ($hr2==null) {\n\t\t\t\t$hr2=0;\n\t\t\t}\n\t\t\t$vr3=hasil(\"select sum(v3) from transaksi2 where tanggal = '$tanggal' and idsk=$sektor\");\n\t\t\tif ($vr3==null) {\n\t\t\t\t$vr3=0;\n\t\t\t}\n\t\t\tmysql_query(\"update rata set hr2=$hr2, vr3=$vr3 where tanggal='$tanggal' and idsk=$sektor\");\n\t\t}\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel2')</script>\";\n\t}\n\n\tif ($_GET['tabel']=='tabel3'){\n\n\t\t$tanggal=hasil(\"select tanggal from laporan where idl = $_GET[id]\");\n\t\t$sektor=hasil(\"select idsk from laporan where idl = $_GET[id]\");\n\n\t\tif ($_SESSION['pref']=='tpi') {\n\t\t\tmysql_query(\"delete from laporan where idl = $_GET[id]\");\n\n\t\t\t$br3=hasil(\"select avg(b3) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br3==null) {\n\t\t\t\t$br3=0;\n\t\t\t}\n\t\t\t$hr3=hasil(\"select avg(h3) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($hr3==null) {\n\t\t\t\t$hr3=0;\n\t\t\t}\n\t\t\t$vr4=hasil(\"select sum(vol) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($vr4==null) {\n\t\t\t\t$vr4=0;\n\t\t\t}\n\n\t\t\tmysql_query(\"update rata set \n\t\t\t\tbr3=$br3, \n\t\t\t\thr3=$hr3,\n\t\t\t\tvr4=$vr4\n\t\t\t\twhere tanggal='$tanggal' and idsk= $sektor\");\n\t\t}\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel3')</script>\";\n\t}\n\n\tcekrata();\n\tmargin();\n\n?>",
+			"file": "hapus.php",
+			"file_size": 3043,
+			"file_write_time": 131191872452549251,
 			"settings":
 			{
-				"buffer_size": 239,
+				"buffer_size": 2962,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ceklog.php",
+			"settings":
+			{
+				"buffer_size": 607,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 216,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -140,7 +173,43 @@
 			"file": "data.php",
 			"settings":
 			{
-				"buffer_size": 2232,
+				"buffer_size": 2321,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tabel1.php",
+			"settings":
+			{
+				"buffer_size": 3404,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tabel2.php",
+			"settings":
+			{
+				"buffer_size": 3406,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tabel3.php",
+			"settings":
+			{
+				"buffer_size": 3355,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gbr_umum.php",
+			"settings":
+			{
+				"buffer_size": 9323,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -163,17 +232,6 @@
 			}
 		},
 		{
-			"contents": "<!-- Portfolio Modals -->\n    <div class=\"portfolio-modal modal fade\" id=\"trenggalek\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>PPN Prigi Trenggalek</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/cabin.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal2\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>Project Title</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/cake.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal3\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>Project Title</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/circus.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal4\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>Project Title</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/game.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal5\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>Project Title</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/safe.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"portfolio-modal modal fade\" id=\"portfolioModal6\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n        <div class=\"modal-content\">\n            <div class=\"close-modal\" data-dismiss=\"modal\">\n                <div class=\"lr\">\n                    <div class=\"rl\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-8 col-lg-offset-2\">\n                        <div class=\"modal-body\">\n                            <h2>Project Title</h2>\n                            <hr class=\"star-primary\">\n                            <img src=\"img/portfolio/submarine.png\" class=\"img-responsive img-centered\" alt=\"\">\n                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href=\"https://sellfy.com/p/8Q9P/jV3VZ/\">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>\n                            <ul class=\"list-inline item-details\">\n                                <li>Client:\n                                    <strong><a href=\"http://startbootstrap.com\">Start Bootstrap</a>\n                                    </strong>\n                                </li>\n                                <li>Date:\n                                    <strong><a href=\"http://startbootstrap.com\">April 2014</a>\n                                    </strong>\n                                </li>\n                                <li>Service:\n                                    <strong><a href=\"http://startbootstrap.com\">Web Development</a>\n                                    </strong>\n                                </li>\n                            </ul>\n                            <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\"><i class=\"fa fa-times\"></i> Close</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>",
-			"file": "modal.php",
-			"file_size": 12843,
-			"file_write_time": 131187736914298650,
-			"settings":
-			{
-				"buffer_size": 12623,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"settings":
 			{
 				"buffer_size": 0,
@@ -188,7 +246,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 219.0,
 		"last_filter": "mat",
 		"selected_items":
 		[
@@ -221,7 +279,7 @@
 				"Set Syntax: Go"
 			]
 		],
-		"width": 392.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -241,14 +299,25 @@
 	},
 	"expanded_folders":
 	[
+		"/D/xampp/htdocs/mrpikan"
 	],
 	"file_history":
 	[
+		"/D/xampp/htdocs/RISE/template-assets/index.html",
+		"/D/xampp/htdocs/mrpikan/bower_components/mocha/mocha.js",
+		"/D/xampp/htdocs/RISE/template-assets/index2.html",
+		"/C/Users/Wild One/Desktop/RISE/Documentation/index.html",
+		"/D/xampp/htdocs/mrpikan/README.md",
+		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/js/carousel.js",
+		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/js/bootstrap.js",
+		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap-theme.css",
+		"/D/xampp/htdocs/mrpikan/modal.php",
+		"/C/Users/Wild One/Desktop/Acara 3/programB1.m",
 		"/D/xampp/htdocs/mrpikan/pages/index.html",
 		"/D/xampp/htdocs/mrpikan/databaseeeee/mrp_ikan struktur data.sql",
 		"/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
 		"/D/xampp/htdocs/mrpikan/gbr_umum.php",
-		"/D/xampp/htdocs/mrpikan/modal.php",
 		"/C/Users/Wild One/Desktop/karakteristik pelabuhan.htm",
 		"/D/xampp/htdocs/mrpikan/transaksi1.php",
 		"/D/xampp/htdocs/mrpikan/tabel_pk.php",
@@ -455,7 +524,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -464,15 +533,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36088,
+						"buffer_size": 36631,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								517,
-								517
+								2855,
+								3347
 							]
 						],
 						"settings":
@@ -482,171 +551,143 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12720.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "input2.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1326,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1108,
-								1205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 462.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "input1.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1582,
-								1582
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1137.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "input3.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1525,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								54,
-								54
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "hapus.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2816,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2276,
-								2276
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7072.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/Wild One/Desktop/Acara 3/programB1.m",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 239,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Objective-C/Objective-C.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 885.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "data.php",
+					"buffer": 1,
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2232,
+						"buffer_size": 1518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2105,
-								2105
+								1518,
+								1518
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "news.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10266,
+								10266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 411.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "input2.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1278,
+								1278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "input1.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1825,
+								1825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "input3.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1463,
+								1463
 							]
 						],
 						"settings":
@@ -662,7 +703,242 @@
 					"type": "text"
 				},
 				{
+					"buffer": 6,
+					"file": "hapus.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2937,
+								2937
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
 					"buffer": 7,
+					"file": "ceklog.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "data.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2025,
+								2025
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 951.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "tabel1.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2857,
+								2857
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "tabel2.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2814,
+								2814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "tabel3.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2763,
+								2763
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "gbr_umum.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								9323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "modul.php",
 					"semi_transient": false,
 					"settings":
@@ -685,14 +961,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2155.0,
+						"translation.y": 80.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 15,
 					"file": "pelabuhan.php",
 					"semi_transient": false,
 					"settings":
@@ -704,8 +980,8 @@
 						"selection":
 						[
 							[
-								7209,
-								7209
+								0,
+								4027
 							]
 						],
 						"settings":
@@ -715,44 +991,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1440.0,
+						"translation.y": 441.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "modal.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12623,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								847,
-								847
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1405.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 16,
 					"semi_transient": false,
 					"settings":
 					{
@@ -775,7 +1021,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				}
 			]

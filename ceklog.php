@@ -14,7 +14,7 @@
 			$_SESSION['pref']=$rs['privilage'];
 			$_SESSION['idsk']=$rs['idsk'];
 						
-			header('location:modul.php?isi=dashboard');
+			header('location:modul.php?isi=awal');
 	} 
 	else{
 		echo"<center><h2>username atau password anda salah.</h2><br>

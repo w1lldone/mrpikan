@@ -11,7 +11,7 @@
 			//hapus data
 			mysql_query("delete from transaksi1 where idt1 = $_GET[id]");
 
-			//begin update rata
+			//begin update rata (lihat input1.php)
 			$br1=hasil("select avg(b1) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor");
 			if ($br1==null) {
 				$br1=0;
