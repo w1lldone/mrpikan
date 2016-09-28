@@ -173,7 +173,10 @@ else if($level=='admin'){ ?>
                         </li>
                         <li>
                             <a href="modul.php?isi=tabel_pd"><i class="fa fa-money fa-fw"></i> Data Pedagang</a>
-                        </li>                        
+                        </li>
+                        <li>
+                            <a href="modul.php?isi=tabel_sk"><i class="fa fa-map-marker fa-fw"></i> Data Sektor</a>
+                        </li>                         
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

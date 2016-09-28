@@ -28,13 +28,16 @@
 	
 	if ($level=='admin') {
 		if($_GET['isi']=="tabel_n"){
-		include "tabel_n.php";
+			include "tabel_n.php";
 		}
 		if($_GET['isi']=="tabel_pk"){
-		include "tabel_pk.php";
+			include "tabel_pk.php";
 		}
 		if($_GET['isi']=="tabel_pd"){
 			include "tabel_pd.php";
+		}
+		if($_GET['isi']=="tabel_sk"){
+			include "tabel_sk.php";
 		}
 		if($_GET['isi']=="prof_mar"){
 			include "prof_mar.php";
@@ -47,6 +50,9 @@
 		}
 		if($_GET['isi']=="tambahpd"){
 			include "tambahpd.php";
+		}
+		if($_GET['isi']=="tambahsk"){
+			include "tambahsk.php";
 		}
 	}
 	
