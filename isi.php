@@ -39,6 +39,9 @@
 		if($_GET['isi']=="prof_mar"){
 			include "prof_mar.php";
 		}
+		if($_GET['isi']=="tambahn"){
+			include "tambahn.php";
+		}
 	}
 	
 

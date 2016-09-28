@@ -91,126 +91,25 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 36631,
+				"buffer_size": 36620,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "isi.php",
 			"settings":
 			{
-				"buffer_size": 1518,
+				"buffer_size": 794,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "news.php",
+			"file": "tabel_n.php",
 			"settings":
 			{
-				"buffer_size": 10898,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "input2.php",
-			"settings":
-			{
-				"buffer_size": 1382,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "input1.php",
-			"settings":
-			{
-				"buffer_size": 1946,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "input3.php",
-			"settings":
-			{
-				"buffer_size": 1585,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\n\tinclude 'data.php';\n\tsession_start();\n\tif ($_GET['tabel']=='tabel1'){\n\t\t//ngecek hak akses (harus tpi)\n\t\tif ($_SESSION['pref']=='tpi') {\n\t\t\t//ambil nilai tanggal dan sektor\n\t\t\t$tanggal=hasil(\"select tanggal from transaksi1 where idt1 = $_GET[id]\");\n\t\t\t$sektor=hasil(\"select idsk from transaksi1 where idt1 = $_GET[id]\");\n\t\t\t\n\t\t\t//hapus data\n\t\t\tmysql_query(\"delete from transaksi1 where idt1 = $_GET[id]\");\n\n\t\t\t//begin update rata (lihat input1.php)\n\t\t\t$br1=hasil(\"select avg(b1) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br1==null) {\n\t\t\t\t$br1=0;\n\t\t\t}\n\t\t\t$br2=hasil(\"select avg(b2) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br2==null) {\n\t\t\t\t$br2=0;\n\t\t\t}\n\t\t\t$persenr=hasil(\"select avg(persen) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($persenr==null) {\n\t\t\t\t$persenr=0;\n\t\t\t}\n\t\t\t$volt=hasil(\"select sum(vol) from transaksi1 where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($volt==null) {\n\t\t\t\t$volt=0;\n\t\t\t}\n\n\t\t\tmysql_query(\"update rata set \n\t\t\t\t\tbr1=$br1, \n\t\t\t\t\tbr2=$br2,\n\t\t\t\t\tvr1=$volt, \n\t\t\t\t\tpersen=$persenr \n\t\t\t\t\twhere tanggal='$tanggal' and idsk= $sektor\");\n\t\t}\n\t\t//end update rata\n\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel1')</script>\";\n\t}\n\n\tif ($_GET['tabel']=='tabel2'){\n\t\tif ($_SESSION['pref']=='tpi') {\n\n\t\t\t$tanggal=hasil(\"select tanggal from transaksi2 where idt2 = $_GET[id]\");\n\t\t\t$sektor=hasil(\"select idsk from transaksi2 where idt2 = $_GET[id]\");\n\n\t\t\tmysql_query(\"delete from transaksi2 where idt2 = $_GET[id]\");\n\n\t\t\t$hr2=hasil(\"select avg(h2) from transaksi2 where tanggal = '$tanggal' and idsk=$sektor\");\n\t\t\tif ($hr2==null) {\n\t\t\t\t$hr2=0;\n\t\t\t}\n\t\t\t$vr3=hasil(\"select sum(v3) from transaksi2 where tanggal = '$tanggal' and idsk=$sektor\");\n\t\t\tif ($vr3==null) {\n\t\t\t\t$vr3=0;\n\t\t\t}\n\t\t\tmysql_query(\"update rata set hr2=$hr2, vr3=$vr3 where tanggal='$tanggal' and idsk=$sektor\");\n\t\t}\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel2')</script>\";\n\t}\n\n\tif ($_GET['tabel']=='tabel3'){\n\n\t\t$tanggal=hasil(\"select tanggal from laporan where idl = $_GET[id]\");\n\t\t$sektor=hasil(\"select idsk from laporan where idl = $_GET[id]\");\n\n\t\tif ($_SESSION['pref']=='tpi') {\n\t\t\tmysql_query(\"delete from laporan where idl = $_GET[id]\");\n\n\t\t\t$br3=hasil(\"select avg(b3) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($br3==null) {\n\t\t\t\t$br3=0;\n\t\t\t}\n\t\t\t$hr3=hasil(\"select avg(h3) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($hr3==null) {\n\t\t\t\t$hr3=0;\n\t\t\t}\n\t\t\t$vr4=hasil(\"select sum(vol) from laporan where tanggal = '$tanggal' and idsk = $sektor\");\n\t\t\tif ($vr4==null) {\n\t\t\t\t$vr4=0;\n\t\t\t}\n\n\t\t\tmysql_query(\"update rata set \n\t\t\t\tbr3=$br3, \n\t\t\t\thr3=$hr3,\n\t\t\t\tvr4=$vr4\n\t\t\t\twhere tanggal='$tanggal' and idsk= $sektor\");\n\t\t}\n\t\techo \"<script>window.alert('data terhapus');\n\t\twindow.location=('modul.php?isi=tabel3')</script>\";\n\t}\n\n\tcekrata();\n\tmargin();\n\n?>",
-			"file": "hapus.php",
-			"file_size": 3043,
-			"file_write_time": 131191872452549251,
-			"settings":
-			{
-				"buffer_size": 2962,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ceklog.php",
-			"settings":
-			{
-				"buffer_size": 607,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config.php",
-			"settings":
-			{
-				"buffer_size": 216,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "data.php",
-			"settings":
-			{
-				"buffer_size": 2321,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "tabel1.php",
-			"settings":
-			{
-				"buffer_size": 3404,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "tabel2.php",
-			"settings":
-			{
-				"buffer_size": 3406,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "tabel3.php",
-			"settings":
-			{
-				"buffer_size": 3355,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "gbr_umum.php",
-			"settings":
-			{
-				"buffer_size": 9323,
-				"encoding": "UTF-8",
+				"buffer_size": 2345,
 				"line_ending": "Windows"
 			}
 		},
@@ -218,23 +117,26 @@
 			"file": "modul.php",
 			"settings":
 			{
-				"buffer_size": 13639,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "pelabuhan.php",
-			"settings":
-			{
-				"buffer_size": 23160,
+				"buffer_size": 13648,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"file": "dashboard.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 2557,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ceklog.php",
+			"settings":
+			{
+				"buffer_size": 602,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -246,8 +148,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 219.0,
-		"last_filter": "mat",
+		"height": 242.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -279,7 +181,7 @@
 				"Set Syntax: Go"
 			]
 		],
-		"width": 512.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -303,11 +205,25 @@
 	],
 	"file_history":
 	[
+		"/D/xampp/htdocs/mrpikan/config.php",
+		"/D/xampp/htdocs/mrpikan/README.md",
+		"/D/xampp/htdocs/mrpikan/news.php",
+		"/D/xampp/htdocs/mrpikan/input2.php",
+		"/D/xampp/htdocs/mrpikan/input1.php",
+		"/D/xampp/htdocs/mrpikan/input3.php",
+		"/D/xampp/htdocs/mrpikan/hapus.php",
+		"/D/xampp/htdocs/mrpikan/ceklog.php",
+		"/D/xampp/htdocs/mrpikan/tabel1.php",
+		"/D/xampp/htdocs/mrpikan/tabel2.php",
+		"/D/xampp/htdocs/mrpikan/tabel3.php",
+		"/D/xampp/htdocs/mrpikan/gbr_umum.php",
+		"/D/xampp/htdocs/mrpikan/modul.php",
+		"/D/xampp/htdocs/mrpikan/pelabuhan.php",
+		"/D/xampp/htdocs/mrpikan/data.php",
 		"/D/xampp/htdocs/RISE/template-assets/index.html",
 		"/D/xampp/htdocs/mrpikan/bower_components/mocha/mocha.js",
 		"/D/xampp/htdocs/RISE/template-assets/index2.html",
 		"/C/Users/Wild One/Desktop/RISE/Documentation/index.html",
-		"/D/xampp/htdocs/mrpikan/README.md",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/js/carousel.js",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/js/bootstrap.js",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap.css",
@@ -317,14 +233,12 @@
 		"/D/xampp/htdocs/mrpikan/pages/index.html",
 		"/D/xampp/htdocs/mrpikan/databaseeeee/mrp_ikan struktur data.sql",
 		"/C/Users/Wild One/Desktop/Carousel Template for Bootstrap.html",
-		"/D/xampp/htdocs/mrpikan/gbr_umum.php",
 		"/C/Users/Wild One/Desktop/karakteristik pelabuhan.htm",
 		"/D/xampp/htdocs/mrpikan/transaksi1.php",
 		"/D/xampp/htdocs/mrpikan/tabel_pk.php",
 		"/D/xampp/htdocs/mrpikan/home.php",
 		"/D/xampp/htdocs/mrpikan/isi.php",
 		"/D/xampp/htdocs/mrpikan/tabel_pd.php",
-		"/D/xampp/htdocs/mrpikan/tabel2.php",
 		"/D/xampp/htdocs/mrpikan/laporan.php",
 		"/D/xampp/htdocs/mrpikan/css/freelancer.min.css",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap.min.edit.css",
@@ -333,38 +247,29 @@
 		"/D/Kuliah/Semester 3/Asisten Instruktur Penkom/PRESENTASI PRAKTIKUM PK/ACARA2/FILE MATLAB/programA1.m",
 		"/D/xampp/htdocs/mrpikan/insert.php",
 		"/D/xampp/htdocs/mrpikan/transaksi2.php",
-		"/D/xampp/htdocs/mrpikan/input2.php",
-		"/D/xampp/htdocs/mrpikan/input1.php",
 		"/D/xampp/htdocs/mrpikan/css/font.css",
-		"/D/xampp/htdocs/mrpikan/modul.php",
 		"/D/xampp/htdocs/mrpikan/tabel_n.php",
 		"/D/xampp/htdocs/mrpikan/prof_mar.php",
 		"/G/DHila/Aulia Riezky Madhila 11659.m",
-		"/D/xampp/htdocs/mrpikan/data.php",
 		"/D/xampp/htdocs/mrpikan/index.php",
 		"/D/Kuliah/Semester 3/Asisten Instruktur Penkom/PRESENTASI PRAKTIKUM PK/ACARA2/FILE MATLAB/programA3a.m",
 		"/D/Kuliah/Semester 3/Asisten Instruktur Penkom/PRESENTASI PRAKTIKUM PK/ACARA2/FILE MATLAB/tugasacaraA1.m",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap.min.css",
-		"/D/xampp/htdocs/mrpikan/input3.php",
 		"/D/xampp/htdocs/mrpikan/logout.php",
 		"/D/xampp/htdocs/mrpikan/js/morris-data.js",
 		"/D/xampp/htdocs/mrpikan/js/flot-data.js",
 		"/D/xampp/htdocs/mrpikan/css/bootstrap.min.css",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/dist/css/bootstrap-theme.min.css",
 		"/D/xampp/htdocs/mrpikan/grafik-mo.php",
-		"/D/xampp/htdocs/mrpikan/hapus.php",
 		"/D/xampp/htdocs/mrpikan/pages/morris.html",
 		"/D/xampp/htdocs/mrpikan/css/freelancer.min.css.ori.css",
 		"/D/xampp/htdocs/mrpikan/js/morris-data2.js",
 		"/D/xampp/htdocs/mrpikan/bower_components/morrisjs/morris.js",
 		"/D/xampp/htdocs/mrpikan/bower_components/morrisjs/morris.min.js",
-		"/D/xampp/htdocs/mrpikan/tabel1.php",
-		"/D/xampp/htdocs/mrpikan/tabel3.php",
 		"/D/xampp/htdocs/smsku/module/simpan.php",
 		"/D/xampp/htdocs/mrpikan/margin.php",
 		"/D/xampp/htdocs/pakanku/simpan.php",
 		"/D/xampp/htdocs/pakanku/daftar_bh.php",
-		"/D/xampp/htdocs/mrpikan/ceklog.php",
 		"/D/xampp/htdocs/mrpikan/transaksi1-backup.php",
 		"/D/xampp/htdocs/mrpikan/bower_components/bootstrap/less/mixins/vendor-prefixes.less",
 		"/D/xampp/htdocs/mrpikan/cektanggal.php",
@@ -524,7 +429,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -533,15 +438,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36631,
+						"buffer_size": 36620,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2855,
-								3347
+								134,
+								134
 							]
 						],
 						"settings":
@@ -551,201 +456,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 885.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1518,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1518,
-								1518
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 240.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "news.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10898,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10266,
-								10266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 411.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "input2.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1278,
-								1278
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "input1.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1946,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1825,
-								1825
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "input3.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1463,
-								1463
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "hapus.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2962,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2937,
-								2937
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "ceklog.php",
+					"buffer": 1,
+					"file": "isi.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 607,
+						"buffer_size": 794,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								366
+								384,
+								384
 							]
 						],
 						"settings":
@@ -755,83 +486,26 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "config.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								69,
-								69
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "data.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2321,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2025,
-								2025
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 951.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "tabel1.php",
+					"buffer": 2,
+					"file": "tabel_n.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3404,
+						"buffer_size": 2345,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2857,
-								2857
+								519,
+								519
 							]
 						],
 						"settings":
@@ -841,117 +515,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "tabel2.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3406,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2814,
-								2814
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "tabel3.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3355,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2763,
-								2763
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "gbr_umum.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								9323
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
+					"buffer": 3,
 					"file": "modul.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13639,
+						"buffer_size": 13648,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7,
-								7
+								2497,
+								2497
 							]
 						],
 						"settings":
@@ -961,27 +545,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 80.0,
+						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "pelabuhan.php",
+					"buffer": 4,
+					"file": "dashboard.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23160,
+						"buffer_size": 2557,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								4027
+								492,
+								492
 							]
 						],
 						"settings":
@@ -989,39 +573,41 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 441.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "ceklog.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								223,
+								223
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
