@@ -45,6 +45,9 @@
 		if($_GET['isi']=="tambahpk"){
 			include "tambahpk.php";
 		}
+		if($_GET['isi']=="tambahpd"){
+			include "tambahpd.php";
+		}
 	}
 	
 
