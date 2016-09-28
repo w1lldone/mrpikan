@@ -177,7 +177,7 @@ include 'news.php';
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 0" data-placement="top" data-content="Keterangan 0" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -187,7 +187,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 1" data-placement="top" data-content="Keterangan 1" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -197,7 +197,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 2" data-placement="top" data-content="Keterangan 2" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -207,7 +207,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                   <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 3" data-placement="bottom" data-content="Keterangan 3" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -217,7 +217,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 4" data-placement="bottom" data-content="Keterangan 4" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -227,7 +227,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 5" data-placement="bottom" data-content="Keterangan 5" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -658,8 +658,7 @@ include 'news.php';
         </a>
     </div>
 
-    <?php include "modal.php"; 
-          include 'gbr_umum.php';
+    <?php include 'gbr_umum.php';
           include 'pelabuhan.php';
     ?>
 
@@ -791,6 +790,21 @@ include 'news.php';
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
+    <!-- tooltip and popover -->
+    <script>
+        // tooltip demo
+    $('.tooltip-demo').tooltip({
+        selector: "[data-toggle=tooltip]",
+        container: "body"
+    })
+
+    // popover demo
+    $("[data-toggle=popover]")
+        .popover()
+
+
+    </script>
 
 </body>
 
