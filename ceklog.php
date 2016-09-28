@@ -13,8 +13,13 @@
 			$_SESSION['nama']=$rs['nama'];
 			$_SESSION['pref']=$rs['privilage'];
 			$_SESSION['idsk']=$rs['idsk'];
-						
+		if ($rs['privilage']=='tpi') {
 			header('location:modul.php?isi=awal');
+		}
+		if ($rs['privilage']=='admin') {
+			header('location:modul.php?isi=prof_mar');
+		}					
+			
 	} 
 	else{
 		echo"<center><h2>username atau password anda salah.</h2><br>

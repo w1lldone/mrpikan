@@ -126,7 +126,7 @@ else if($level=='admin'){ ?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Sistem Informasi Logistik Ikan Tangkap - Administrator</a>
+                <a class="navbar-brand" href="modul.php?isi=prof_mar">Sistem Informasi Logistik Ikan Tangkap - Administrator</a>
             </div>
             <!-- /.navbar-header -->
 
