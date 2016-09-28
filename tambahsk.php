@@ -70,7 +70,7 @@
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-anchor"></i></span>
                                             <input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>">
-                                            <input type="hidden" name="idpd" value="<?php echo $id ;?>"> 
+                                            <input type="hidden" name="idsk" value="<?php echo $id ;?>"> 
                                         </div>
                                         <label>Alamat</label>
                                         <div class="form-group input-group">

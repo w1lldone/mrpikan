@@ -104,5 +104,35 @@
 			echo "<script>window.alert('data terhapus');
 			window.location=('modul.php?isi=tabel_pd')</script>";
 		}
+
+		//input sektor
+		if ($_GET['act']=='inputsk') {
+			mysql_query("INSERT INTO sektor(nama, alamat)
+				VALUES(
+					'$_POST[nama]',
+					'$_POST[alamat]')");
+
+			echo "<script>window.alert('data tersimpan');
+			window.location=('modul.php?isi=tabel_sk')</script>";
+		}
+
+		//edit sektor
+		if ($_GET['act']=='editsk') {
+			mysql_query("update sektor set 
+			nama='$_POST[nama]', 
+			alamat='$_POST[alamat]'
+			where idsk=$_POST[idsk]");
+
+			echo "<script>window.alert('data tersimpan');
+			window.location=('modul.php?isi=tabel_sk')</script>";
+		}
+
+		//hapus sektor
+		if ($_GET['act']=='hapussk') {
+			mysql_query("delete from sektor where idsk = $_GET[id]");
+
+			echo "<script>window.alert('data terhapus');
+			window.location=('modul.php?isi=tabel_sk')</script>";
+		}
 	}
 ?>
