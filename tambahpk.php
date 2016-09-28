@@ -1,7 +1,7 @@
 <?php if($_GET['act']=='input'){ ?>            
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h1 class="page-header">Tambah Anggota Nelayan</h1>
+                    <h1 class="page-header">Tambah Anggota Pemiik Kapal</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -15,7 +15,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="post" role="form" action="input_anggota.php?act=inputn">
+                                    <form method="post" role="form" action="input_anggota.php?act=inputpk">
                                         <label>Nama</label>
 										 <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -59,7 +59,7 @@
 <?php } // if act input 
     else if ($_GET['act']=='edit') { 
         $id=$_GET['id'];    
-        $sql="select * from nelayan where idn = $id";
+        $sql="select * from p_kapal where idpk = $id";
         $q=mysql_query($sql) or die(mysql_error());
         $row=mysql_fetch_array($q);
 
@@ -71,7 +71,7 @@
 ?>
 <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h1 class="page-header">Edit Data Anggota Nelayan</h1>
+                    <h1 class="page-header">Edit Anggota Pemilik Kapal</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -85,12 +85,12 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="post" role="form" action="input_anggota.php?act=editn">
+                                    <form method="post" role="form" action="input_anggota.php?act=editpk">
                                         <label>Nama</label>
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                             <input type="text" class="form-control" name="nama" value="<?php echo $nama; ?>">
-                                            <input type="hidden" name="idn" value="<?php echo $id ;?>"> 
+                                            <input type="hidden" name="idpk" value="<?php echo $id ;?>"> 
                                         </div>
                                         <label>Nomer HP</label>
                                         <div class="form-group input-group">

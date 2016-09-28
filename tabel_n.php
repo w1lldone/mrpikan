@@ -39,7 +39,8 @@
                                                 <td class="text-center">
                                                     <a href="modul.php?isi=tambahn&act=edit&id=<?php echo $row['idn'] ?>"><button type="button" class="btn btn-info">Edit</button> 
                                                     <a href="input_anggota.php?act=hapusn&id=<?php echo $row['idn'] ?>" onclick="return confirm('Anda Yakin?')"><button type="button" class="btn btn-danger">Hapus</button></a>
-                                                </td> <?php } ?>
+                                                </td> 
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>

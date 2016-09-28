@@ -42,6 +42,9 @@
 		if($_GET['isi']=="tambahn"){
 			include "tambahn.php";
 		}
+		if($_GET['isi']=="tambahpk"){
+			include "tambahpk.php";
+		}
 	}
 	
 

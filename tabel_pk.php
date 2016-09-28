@@ -9,8 +9,8 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a href="modul.php?isi=input1&act=input">
-                                <button type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-plus-square"></i>  Tambah Anggota</button>
+                            <a href="modul.php?isi=tambahpk&act=input">
+                                <button type="button" class="btn btn-primary"><i class="fa fa-plus-square"></i>  Tambah Anggota</button>
                             </a>
                         </div>
                         <!-- /.panel-heading -->
@@ -22,7 +22,8 @@
                                             <th>Nama</th>
 											<th>Sektor</th>
                                             <th>Alamat</th>
-                                            <th>No Hp</th>                                            
+                                            <th>No Hp</th>
+                                            <th>Action</th>                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -34,7 +35,12 @@
 												echo"<td>$row[nama]</td>";
 												echo"<td>".hasil("select nama from sektor where idsk = $row[idsk]")."</td>";
 												echo"<td>$row[alamat]</td>";
-												echo"<td>$row[no_hp]</td>";} ?>
+												echo"<td>$row[no_hp]</td>";?>
+                                                <td class="text-center">
+                                                    <a href="modul.php?isi=tambahpk&act=edit&id=<?php echo $row['idpk'] ?>"><button type="button" class="btn btn-info">Edit</button> 
+                                                    <a href="input_anggota.php?act=hapuspk&id=<?php echo $row['idpk'] ?>" onclick="return confirm('Anda Yakin?')"><button type="button" class="btn btn-danger">Hapus</button></a>
+                                                </td> 
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
