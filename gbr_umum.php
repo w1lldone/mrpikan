@@ -13,11 +13,11 @@
                             <h2>Gambaran Umum Sistem Perikanan Tangkap Indonesia</h2>
                             <hr class="star-primary">
                             <img src="img/1.jpg" class="img-responsive img-centered" alt="">
-                            <p><em>Keterangan 0</em></p>
+                            
                             <br>
                             <p>Sistem usaha perikanan tangkap terdiri dari rangkaian proses mulai dari pra produksi hingga distribusi. Secara umum rangkaian proses yang dilakukan di daerah pelabuhan perikanan di Pulau Jawa adalah sebagai berikut.</p>
                             <img src="img/rangkaian.png" class="img-responsive" alt="">
-                            <p><em>Keterangan 1</em></p>
+                            <p><em>Rangkaian aktifitas perikanan tangkap</em></p>
                             <br>
                         </div>
                         
@@ -34,11 +34,11 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <img src="img/2.jpg" class="img-responsive" alt="">
-                            <p><em>Keterangan 3</em></p>
+                            <p><em>Pengangkutan perbekalan es ke Kapal</em></p>
                         </div>
                         <div class="col-lg-6">
                             <img src="img/3.jpg" class="img-responsive" alt="">
-                            <p><em>Keterangan 4</em></p>
+                            <p><em>Material perbekalan berlayar</em></p>
                         </div>
                     </div>
 
@@ -71,7 +71,7 @@
                         <div class="col-lg-6">
                             <img src="img/5.jpg" class="img-responsive" alt="">
                         </div>
-                        <p><em>Keterangan 5</em></p>
+                        <p><em>Proses bongkar muat ikan dari atas kapal menuju ke TPI</em></p>
                     </div>
 
                     <div class="row">
@@ -83,7 +83,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3">
                             <img src="img/6.jpg" class="img-responsive" alt="">
-                            <p><em>Keterangan 6</em></p>
+                            <p><em>Proses pelelangan ikan</em></p>
                         </div>
                     </div>
 
@@ -104,7 +104,7 @@
                         <div class="col-lg-6">
                             <img src="img/8.jpg" class="img-responsive" alt="">
                         </div>
-                        <p><em>Keterangan 8</em></p>                        
+                        <p><em>Pengangkutan ikan dari TPI ke kendaraan</em></p>                        
                     </div>
                     <br>
 

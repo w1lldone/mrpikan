@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SI Perikanan Tangkap</title>
+    <title>Sistem Informasi Perikanan Tangkap</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
@@ -57,7 +57,7 @@ include 'news.php';
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">SI Perikanan Tangkap</a>
+                <a class="navbar-brand" href="#page-top">Sistem Informasi Perikanan Tangkap</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -177,7 +177,7 @@ include 'news.php';
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 0" data-placement="top" data-content="Keterangan 0" data-trigger="focus" >
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPN Prigi Trenggalek" data-placement="top" data-content="Keberangkatan Kapal untuk aktivitas Operasi Penangkapan Ikan" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -187,7 +187,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 1" data-placement="top" data-content="Keterangan 1" data-trigger="focus" >
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPN Brondong Lamongan" data-placement="top" data-content="Pengangkutan Perbekalan es ke Kapal" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -197,7 +197,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 2" data-placement="top" data-content="Keterangan 2" data-trigger="focus" >
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPS Cilacap" data-placement="top" data-content="Material perbekalan berlayar" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -207,7 +207,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                   <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 3" data-placement="bottom" data-content="Keterangan 3" data-trigger="focus" >
+                   <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPN Pekalongan" data-placement="bottom" data-content="Proses bongkar muat ikan dari atas kapal menuju ke TPI" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -217,7 +217,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 4" data-placement="bottom" data-content="Keterangan 4" data-trigger="focus" >
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPP Sadeng Gunungkidul" data-placement="bottom" data-content="Proses bongkar muat ikan dari atas kapal menuju ke TPI" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -227,7 +227,7 @@ include 'news.php';
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="Judul 5" data-placement="bottom" data-content="Keterangan 5" data-trigger="focus" >
+                    <a  tabindex="0" class="portfolio-link" role="button" data-toggle="popover" title="PPN Pekalongan" data-placement="bottom" data-content="Proses Pelelangan Ikan" data-trigger="focus" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -609,12 +609,12 @@ include 'news.php';
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                        <h3>Disusun Oleh :</h3>
+                        <p>Roni Bintoro
+                            <br>12/333501/TP/10519</p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
+                        <!--<h3>Around the Web</h3> -->
                         <ul class="list-inline">
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -634,9 +634,12 @@ include 'news.php';
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
+                        <h3>Dosen Pembimbing : </h3>
+                        <p> Dr. Ir. Endy Suwondo, DEA.
+						<br> Dr. Nafis Khuriyati, STP, M.Agr. </p>
+							<!-- <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    -->
+					</div>
                 </div>
             </div>
         </div>
@@ -644,7 +647,8 @@ include 'news.php';
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                        Copyright &copy; Departemen Teknologi Industri Pertanian, Fakultas Teknologi Pertanian, Universitas Gadjah Mada, Yogyakarta, 2016
+						
                     </div>
                 </div>
             </div>

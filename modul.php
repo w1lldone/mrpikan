@@ -102,7 +102,7 @@ if($level=='tpi'){ ?>
                             <!-- /input-group -->
                         </li>                       
                         <li>
-                            <a href="modul.php?isi=tabel1"><i class="fa fa-anchor fa-fw"></i> Laporan Penagkapan</a>
+                            <a href="modul.php?isi=tabel1"><i class="fa fa-anchor fa-fw"></i> Laporan Penangkapan</a>
                         </li>
                         <li>
                             <a href="modul.php?isi=tabel2"><i class="fa fa-user fa-fw"></i> Laporan Pelelangan</a>

@@ -55,7 +55,7 @@
                             <h2>Sejuta Nelayan Bakal Diasuransikan</h2>
                             <hr class="star-primary">
                             <img src="img/news/2.jpg" class="img-responsive img-centered" alt="">
-                            <p><em>Keterangan 0</em></p>
+                           <!-- <p><em>Keterangan 0</em></p> -->
                             <br>
                             <p class="text-justify">Kementerian Kelautan dan Perikanan (KKP) terus memberikan dukungan bagi tumbuh kembangnya sektor kelautan dan perikanan. Untuk itu, pihaknya menggagas program asuransi satu juta nelayan pada tahun depan. Syafril Fauzi, Direktur Kenelayanan Dirjen Perikanan Tangkap KKP mengatakan, pihaknya menaruh perhatian sangat besar bagi industri kelautan dan perikanan. Tidak hanya itu, Kementerian di bawah komando Susi Pudjiastuti ini juga beritikad baik melindungi nelayan dari risiko melaut.</p>
                             <p class="text-justify">Untuk itu, pihaknya menggagas program asuransi bagi satu juta nelayan. Rencananya program ini akan berjalan pada awal tahun depan. "Asuransi ini guna melindungi nelayan saat bekerja. Kami sedang merancang cakupan asuransi ini," jelas Syafril Fauzi usai menghadiri diskusi KONTAN bersama OJK dengan tema Semakin Intim dengan Maritim di Hotel Santika, Selasa (15/12).</p>
@@ -95,8 +95,8 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <h2>Pemerintah Siap Bangun 58 Unit <em>Cold Storage</em></h2>
                             <hr class="star-primary">
-                            <img src="img/news/2.jpg" class="img-responsive img-centered" alt="">
-                            <p><em>Keterangan 0</em></p>
+                            <img src="img/news/3.jpg" class="img-responsive img-centered" alt="">
+                            <!--<p><em>Keterangan 0</em></p> -->
                             <br>
                             <p class="text-justify">Kementerian Kelautan dan Perikanan (KKP) siap merogoh dana sebesar Rp 220 miliar untuk membangun 58 unit rantai pendingin makanan (cold storage) di 22 provinsi sepanjang tahun ini. Pembangunan cold storage berkapasitas 30 ribu ton tersebut digunakan untuk menampung berbagai hasil produksi perikanan yang diambil dari daerah sentra produksi. Dirjen Pengolahan dan Pemasaran Hasil Perikanan (P2HP) Kementerian Kelautan dan Perikanan, Saut P Hutagalung, mengatakan pengadaan 58 cold storage tersebut lebih banyak dibandingkan pemerintahan tahun lalu yaitu sebanyak 70 unit selama lima tahun. Rencananya, pemerintah akan membangun 280 cold storage selama lima tahun ke depan.</p>
                             <p class="text-justify">"Tapi, itu belum termasuk yang dibangun oleh swasta dan pemerintah daerah," katanya usai workshop "Daya Dukung Industri Mesin Logistik Berpendingin untuk Produk Hasil Laut dan Perikanan Nasional", di Kementerian Perindustrian, Rabu (4/3/2015). Seperti diketahui, pembangunan cold storage itu ditujukan untuk menampung berbagai hasil produksi perikanan yang diambil dari daerah sentra produksi seperti yang ada di kawasan perairan Indonesia timur. Namun sayang, Saut belum menemukan lokasi yang tepat untuk menaruh cold storage tersebut. “Ada kemungkinan kami bangun di wilayah timur Indonesia seperti Ambon, Sorong atau Ternate,” kata Saut.</p>
