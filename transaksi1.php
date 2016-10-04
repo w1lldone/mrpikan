@@ -1,7 +1,7 @@
 <?php if($_GET['act']=='input'){ ?>            
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h1 class="page-header">Transaksi Penagkapan Ikan</h1>
+                    <h1 class="page-header">Transaksi Penangkapan Ikan</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

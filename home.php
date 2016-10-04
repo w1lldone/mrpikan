@@ -685,7 +685,7 @@ include 'news.php';
     <script src="js/contact_me.js"></script>
     <script>
         $(function() {            
-            Morris.Area({
+            Morris.Line({
                 <?php if ($_GET['vol']=='total') { ?>
                     element: 'grafik-vol',
                     data: 
@@ -713,7 +713,7 @@ include 'news.php';
                 <?php }?>
             });
 
-            Morris.Area({
+            Morris.Line({
                 <?php if ($_GET['vol']=='total') { ?>
                     element: 'grafik-vol-jual',
                     data: 
@@ -741,7 +741,7 @@ include 'news.php';
                 <?php }?>
             });
             
-            Morris.Area({
+            Morris.Line({
                 <?php if ($_GET['vol']=='total'){ ?>
                     element: 'grafik-harga',
                     data: 
