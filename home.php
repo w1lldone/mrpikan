@@ -67,7 +67,7 @@ include 'news.php';
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#page-top" >News</a>
+                        <a href="#page-top" >Berita</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#portfolio">Galeri</a>
