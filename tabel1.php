@@ -20,10 +20,11 @@
                                     <thead>
                                         <tr>
                                             <th>Tanggal</th>
-											<th>Sektor</th>
                                             <th>Pemilik Kapal</th>
+                                            <th>Biaya P. Kapal(Rp/kg)</th>
                                             <th>Nelayan</th>
-                                            <th>Volume</th>
+                                            <th>Biaya Nelayan(Rp/kg)</th>
+                                            <th>Volume (kg)</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -41,9 +42,10 @@
 											while ($row=mysql_fetch_array($q)){						
 												echo"<tr class='odd gradeX'>";
 												echo"<td>$row[tanggal]</td>";
-												echo"<td>".ambil('sektor', 'nama', 'idsk', $row['idsk'])."</td>";
 												echo"<td>".ambil('p_kapal', 'nama', 'idpk', $row['idpk'])."</td>";
+                                                echo"<td>$row[b2]</td>";
 												echo"<td>".ambil('nelayan', 'nama', 'idn', $row['idn'])."</td>";
+                                                echo"<td>$row[b1]</td>";
 												echo"<td>$row[vol]</td>";?>												
 												    <td class="text-center">
                                                         <a href="modul.php?isi=input1&act=edit&id=<?php echo $row['idt1'] ?>"><button type="button" class="btn btn-info">Edit</button> 

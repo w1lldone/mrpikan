@@ -45,6 +45,41 @@
 <?php
 include "data.php";
 include 'news.php';
+if (isset($_GET['vol'])) {
+    switch ($_GET['vol']) {
+        case '1':
+            $kode='PPN Trenggalek';
+            break;
+
+        case '2':
+            $kode='PPN Lamongan';
+            break;
+
+        case '3':
+            $kode='PPN Indramayu';
+            break;
+
+        case '4':
+            $kode='PPS Cilacap';
+            break;  
+
+        case '5':
+            $kode='PPN Sukabumi';
+            break;
+
+        case '6':
+            $kode='PPP Gunung Kidul';
+            break;
+
+        case '7':
+            $kode='PPN Pekalongan';
+            break;
+
+        default:
+            $kode='Total';
+            break;
+    }
+}
 ?>
 
 <body id="page-top" class="index">
@@ -420,6 +455,7 @@ include 'news.php';
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Volume Ikan Tangkap</h2>
+                    <h3>(<?php echo $kode; ?>)</h3>
                     <div class="btn-group">
                         <button type="button" href="#" class="btn btn-lg btn-outline dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-angle-down"></i> Action
@@ -459,6 +495,7 @@ include 'news.php';
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Volume Penjualan Ikan</h2>
+                    <h3>(<?php echo $kode; ?>)</h3>
                     <div class="btn-group">
                         <button type="button" href="#" class="btn btn-lg btn-outline dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-angle-down"></i> Action
@@ -498,6 +535,7 @@ include 'news.php';
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Harga Ikan Tangkap</h2>
+                    <h3>(<?php echo $kode; ?>)</h3>
                     <div class="btn-group">
                         <button type="button" href="#" class="btn btn-lg btn-outline dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-angle-down"></i> Action

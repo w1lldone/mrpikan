@@ -21,8 +21,9 @@
                                         <tr>
                                             <th>Tanggal</th>								                                           
                                             <th>Pedagang</th>
-                                            <th>Volume</th>
-                                            <th>Harga</th>
+                                            <th>Volume(kg)</th>
+                                            <th>Harga(Rp/kg)</th>
+                                            <th>Biaya(Rp/kg)</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -40,9 +41,10 @@
 											while ($row=mysql_fetch_array($q)){						
 												echo"<tr class='odd gradeX'>";
 												echo"<td>$row[tanggal]</td>";
-												echo"<td>".ambil('pedagang', 'nama', 'idpd', $row['idpd'])."</td>";                         
-												echo"<td>$row[vol]</td>";
-                                                echo"<td>$row[h3]</td>";?>												
+    											echo"<td>".ambil('pedagang', 'nama', 'idpd', $row['idpd'])."</td>";					
+                                                echo"<td>$row[vol]</td>";
+                                                echo"<td>$row[h3]</td>";
+                                                echo"<td>$row[b3]</td>";?>												
 												    <td class="text-center">
                                                     <a href="modul.php?isi=input3&act=edit&id=<?php echo $row['idl'] ?>"><button type="button" class="btn btn-info">Edit</button> 
                                                     <a href="hapus.php?tabel=tabel3&id=<?php echo $row['idl'] ?>" onclick="return confirm('Anda Yakin?')"><button type="button" class="btn btn-danger">Hapus</button></a></td>                      
