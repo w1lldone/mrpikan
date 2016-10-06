@@ -247,7 +247,7 @@ include 'news.php';
                 <div class="col-lg-12 text-center">
                     <h2>Tentang<br>
                     Sistem Perikanan Tangkap Indonesia</h2>
-                    <hr class="star-light">
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
@@ -270,7 +270,7 @@ include 'news.php';
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Karakteristik Pelabuhan</h2>
-                    <hr class="star-light">
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
