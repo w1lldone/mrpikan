@@ -1,0 +1,3 @@
+- Share margin dipindah di halaman admin
+- tombol action diganti sesuai lokasi
+- nama sumbu x dan y di grafik. 
