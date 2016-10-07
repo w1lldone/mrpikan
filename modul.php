@@ -21,7 +21,7 @@
     <!-- MetisMenu CSS -->
     <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-     <!-- DataTables CSS -->
+    <!-- DataTables CSS -->
     <link href="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
@@ -44,20 +44,20 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-</head>
+    </head>
 
-<body>
-<?php
+    <body>
+        <?php
 
-$level="";
-if(!empty($_SESSION['nama'])){
-    $level=$_SESSION['pref'];
-    $sektor=$_SESSION['idsk'];
-}
-if($level=='tpi'){ ?>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        $level="";
+        if(!empty($_SESSION['nama'])){
+            $level=$_SESSION['pref'];
+            $sektor=$_SESSION['idsk'];
+        }
+        if($level=='tpi'){ ?>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -94,10 +94,10 @@ if($level=='tpi'){ ?>
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
                             <!-- /input-group -->
                         </li>                       
@@ -115,153 +115,153 @@ if($level=='tpi'){ ?>
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
-    </nav>
+        </nav>
 <?php } //if privilage tpi
 else if($level=='admin'){ ?>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="modul.php?isi=prof_mar">Sistem Informasi Logistik Ikan Tangkap - Administrator</a>
-            </div>
-            <!-- /.navbar-header -->
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="modul.php?isi=prof_mar">Sistem Informasi Logistik Ikan Tangkap - Administrator</a>
+    </div>
+    <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <?php echo $_SESSION['nama']; ?> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <?php echo $_SESSION['nama']; ?> <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
-                <!-- /.dropdown -->
+                <li class="divider"></li>
+                <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
             </ul>
-            <!-- /.navbar-top-links -->
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+    <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>                       
-                        <li>
-                            <a href="modul.php?isi=prof_mar"><i class="glyphicon glyphicon-signal"></i> Profit Margin</a>
-                        </li>
-                        <li>
-                            <a href="modul.php?isi=tabel_n"><i class="fa fa-anchor fa-fw"></i> Data Nelayan</a>
-                        </li> 
-                        <li>
-                            <a href="modul.php?isi=tabel_pk"><i class="fa fa-user fa-fw"></i> Data Pemilik Kapal</a>
-                        </li>
-                        <li>
-                            <a href="modul.php?isi=tabel_pd"><i class="fa fa-money fa-fw"></i> Data Pedagang</a>
-                        </li>
-                        <li>
-                            <a href="modul.php?isi=tabel_sk"><i class="fa fa-map-marker fa-fw"></i> Data Sektor</a>
-                        </li>                         
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-    </nav>
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="sidebar-search">
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <!-- /input-group -->
+                </li>                       
+                <li>
+                    <a href="modul.php?isi=prof_mar"><i class="glyphicon glyphicon-signal"></i> Profit Margin</a>
+                </li>
+                <li>
+                    <a href="modul.php?isi=tabel_n"><i class="fa fa-anchor fa-fw"></i> Data Nelayan</a>
+                </li> 
+                <li>
+                    <a href="modul.php?isi=tabel_pk"><i class="fa fa-user fa-fw"></i> Data Pemilik Kapal</a>
+                </li>
+                <li>
+                    <a href="modul.php?isi=tabel_pd"><i class="fa fa-money fa-fw"></i> Data Pedagang</a>
+                </li>
+                <li>
+                    <a href="modul.php?isi=tabel_sk"><i class="fa fa-map-marker fa-fw"></i> Data Sektor</a>
+                </li>                         
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>
 
 <?php } else { ?>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Sistem Informasi Logistik Ikan Tangkap</a>
-            </div>
-            <!-- /.navbar-header -->
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Sistem Informasi Logistik Ikan Tangkap</a>
+    </div>
+    <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li><a href="login.php"><i class="fa fa-sign-in fa-fw"></i> Login</a>                
-                <!-- /.dropdown -->
-            </ul>
-            <!-- /.navbar-top-links -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li><a href="login.php"><i class="fa fa-sign-in fa-fw"></i> Login</a>                
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
 
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
-                        <li>
-                            <a href="modul.php?isi=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>                                                
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li>
+                        <a href="modul.php?isi=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>                                                
+                </ul>
             </div>
-            <!-- /.navbar-static-side -->
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
     </nav>
-<?php } ?>
-<div id="page-wrapper">
-    <?php 
-    include 'data.php';
-    include "isi.php";  ?>
-</div>
+    <?php } ?>
+    <div id="page-wrapper">
+        <?php 
+        include 'data.php';
+        include "isi.php";  ?>
+    </div>
 
-<!-- jQuery -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 
 
     <!-- Bootstrap Core JavaScript -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-<!-- DataTables JavaScript -->
-<script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-<script src="dist/js/sb-admin-2.js"></script>
+    <script src="dist/js/sb-admin-2.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="bower_components/raphael/raphael-min.js"></script>
-<script src="bower_components/morrisjs/morris.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="bower_components/raphael/raphael-min.js"></script>
+    <script src="bower_components/morrisjs/morris.min.js"></script>
 
     <!-- Bootstrap Date-Picker Plugin -->
-<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
 
     <!-- Date picker -->
-<script>
-    $(document).ready(function(){
+    <script>
+        $(document).ready(function(){
         var date_input=$('input[name="tanggal"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         var options={
@@ -277,46 +277,64 @@ else if($level=='admin'){ ?>
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-                responsive: true
+            responsive: true
         });
     });
 </script>
 <script>
     Morris.Donut({
-                element: 'pm-nel',
-                data: [{
-                    label: "Profit",
-                    value: <?php echo hasil("select pm_nel from margin")*100; ?>
-                }, {
-                    label: "Biaya",
-                    value: <?php echo (1-hasil("select pm_nel from margin"))*100; ?>
-                }],
-                formatter: function (x, data) { return x + '%'; },
-                resize: true
+        element: 'pm-nel',
+        data: [{
+            label: "Profit",
+            value: <?php echo hasil("select pm_nel from margin")*100; ?>
+        }, {
+            label: "Biaya",
+            value: <?php echo (1-hasil("select pm_nel from margin"))*100; ?>
+        }],
+        formatter: function (x, data) { return x + '%'; },
+        resize: true
     });
     Morris.Donut({
-                element: 'pm-pk',
-                data: [{
-                    label: "Profit",
-                    value: <?php echo hasil("select pm_pk from margin")*100; ?>
-                }, {
-                    label: "Biaya",
-                    value: <?php echo (1-hasil("select pm_pk from margin"))*100; ?>
-                }],
-                formatter: function (x, data) { return x + '%'; },
-                resize: true
+        element: 'pm-pk',
+        data: [{
+            label: "Profit",
+            value: <?php echo hasil("select pm_pk from margin")*100; ?>
+        }, {
+            label: "Biaya",
+            value: <?php echo (1-hasil("select pm_pk from margin"))*100; ?>
+        }],
+        formatter: function (x, data) { return x + '%'; },
+        resize: true
     });
     Morris.Donut({
-                element: 'pm-pd',
-                data: [{
-                    label: "Profit",
-                    value: <?php echo hasil("select pm_pd from margin")*100; ?>
-                }, {
-                    label: "Biaya",
-                    value: <?php echo (1-hasil("select pm_pd from margin"))*100; ?>
-                }],
-                formatter: function (x, data) { return x + '%'; },
-                resize: true
+        element: 'pm-pd',
+        data: [{
+            label: "Profit",
+            value: <?php echo hasil("select pm_pd from margin")*100; ?>
+        }, {
+            label: "Biaya",
+            value: <?php echo (1-hasil("select pm_pd from margin"))*100; ?>
+        }],
+        formatter: function (x, data) { return x + '%'; },
+        resize: true
+    });
+    Morris.Donut({
+        element: 'share-margin',
+        data: [{
+            label: "SM nelayan",
+            value: <?php echo hasil("select sm_nel from margin")*100; ?>
+        }, {
+            label: "SM pedagang",
+            value: <?php echo hasil("select sm_pd from margin")*100; ?>
+        }, {
+            label: "SM Pemilik Kapal",
+            value: <?php echo hasil("select sm_pk from margin")*100; ?>
+        }, {
+            label: "Biaya Total",
+            value: <?php echo hasil("select ps_biaya from margin")*100; ?>
+        }],
+        formatter: function (x, data) { return x + '%'; },
+        resize: true
     });
 </script>
 
