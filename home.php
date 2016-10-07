@@ -120,7 +120,6 @@ if (isset($_GET['vol'])) {
                         <li class="page-scroll"><a href="#grafik">Vol Tangkap</a></li>
                         <li class="page-scroll"><a href="#vol-jual">Vol Jual</a></li>
                         <li class="page-scroll"><a href="#harga">Harga Jual</a></li>
-                        <li class="page-scroll"><a href="#share">Share Margin</a></li>
                       </ul>
                     </li>
                     <li><a href="login.php" target="_blank"><i class="fa fa-user"></i> Login</a>
@@ -569,23 +568,6 @@ if (isset($_GET['vol'])) {
         </div>
     </section><!-- grafik harga -->
 
-     <!-- grafik harga Section -->
-    <section id="share">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Share Margin</h2>
-                </div>
-            </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div id="share-margin"></div>
-                </div>                
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -733,7 +715,8 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['sum(vr1)'],
                     xLabels: 'day',
-                    labels: ['Volume Tangkap'],       
+                    labels: ['Volume Tangkap '],
+                    postUnits : ' Kg',       
                     behaveLikeLine: true
                 <?php }?>
 
@@ -746,7 +729,8 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['vr1'],
                     xLabels: 'day',
-                    labels: ['Volume Tangkap'],       
+                    labels: ['Volume Tangkap '],
+                    postUnits : ' Kg',       
                     behaveLikeLine: true
                 <?php }?>
             });
@@ -761,7 +745,8 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['sum(vr3)'],
                     xLabels: 'day',
-                    labels: ['Volume Jual'],       
+                    labels: ['Volume Jual '],
+                    postUnits : ' Kg',       
                     behaveLikeLine: true
                 <?php }?>
 
@@ -774,7 +759,8 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['vr3'],
                     xLabels: 'day',
-                    labels: ['Volume Tangkap'],       
+                    labels: ['Volume Tangkap '],
+                    postUnits : ' Kg',       
                     behaveLikeLine: true
                 <?php }?>
             });
@@ -789,7 +775,8 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['avg(hr2)'],
                     xLabels: 'day',
-                    labels: ['Harga Ikan'],        
+                    labels: ['Harga Ikan'],
+                    preUnits : 'Rp. ',        
                     behaveLikeLine: true
                 <?php } ?>
 
@@ -802,30 +789,11 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['hr2'],
                     xLabels: 'day',
-                    labels: ['Harga Ikan'],        
+                    labels: ['Harga Ikan'],
+                    preUnits : 'Rp. ',        
                     behaveLikeLine: true
                 <?php } ?>
             });
-            
-             Morris.Donut({
-                element: 'share-margin',
-                data: [{
-                    label: "SM nelayan",
-                    value: <?php echo hasil("select sm_nel from margin")*100; ?>
-                }, {
-                    label: "SM pedagang",
-                    value: <?php echo hasil("select sm_pd from margin")*100; ?>
-                }, {
-                    label: "SM Pemilik Kapal",
-                    value: <?php echo hasil("select sm_pk from margin")*100; ?>
-                }, {
-                    label: "Biaya Total",
-                    value: <?php echo hasil("select ps_biaya from margin")*100; ?>
-                }],
-                formatter: function (x, data) { return x + '%'; },
-                resize: true
-            });
-
         }) 
 
     </script>
