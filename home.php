@@ -48,15 +48,15 @@ include 'news.php';
 if (isset($_GET['vol'])) {
     switch ($_GET['vol']) {
         case '1':
-            $kode='PPN Trenggalek';
+            $kode='PPN Prigi Trenggalek';
             break;
 
         case '2':
-            $kode='PPN Lamongan';
+            $kode='PPN Brondong Lamongan';
             break;
 
         case '3':
-            $kode='PPN Indramayu';
+            $kode='PPN Karangsong Indramayu';
             break;
 
         case '4':
@@ -64,11 +64,11 @@ if (isset($_GET['vol'])) {
             break;  
 
         case '5':
-            $kode='PPN Sukabumi';
+            $kode='PPN Pelabuhanratu Sukabumi';
             break;
 
         case '6':
-            $kode='PPP Gunung Kidul';
+            $kode='PPP Sadeng Gunung Kidul';
             break;
 
         case '7':
@@ -463,17 +463,17 @@ if (isset($_GET['vol'])) {
                             <li><a href="home.php?vol=total&harga=total#grafik">Total</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="home.php?vol=1#grafik">PPN Trenggalek</a>
+                            <li><a href="home.php?vol=1#grafik">PPN Prigi Trenggalek</a>
                             </li>
-                            <li><a href="home.php?vol=2#grafik">PPN Lamongan</a>
+                            <li><a href="home.php?vol=2#grafik">PPN Brondong Lamongan</a>
                             </li> 
-                            <li><a href="home.php?vol=3#grafik">PPN Indramayu</a>
+                            <li><a href="home.php?vol=3#grafik">PPN Karangsong Indramayu</a>
                             </li>
                             <li><a href="home.php?vol=4#grafik">PPS Cilacap</a>
                             </li>
-                            <li><a href="home.php?vol=5#grafik">PPN Sukabumi</a>
+                            <li><a href="home.php?vol=5#grafik">PPN Pelabuhanratu Sukabumi</a>
                             </li>
-                            <li><a href="home.php?vol=6#grafik">PPP Gunung Kidul</a>
+                            <li><a href="home.php?vol=6#grafik">PPP Sadeng Gunung Kidul</a>
                             </li>
                             <li><a href="home.php?vol=7#grafik">PPN Pekalongan</a>
                         </ul>
@@ -503,17 +503,17 @@ if (isset($_GET['vol'])) {
                             <li><a href="home.php?vol=total#vol-jual">Total</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="home.php?vol=1#vol-jual">PPN Trenggalek</a>
+                            <li><a href="home.php?vol=1#vol-jual">PPN Prigi Trenggalek</a>
                             </li>
-                            <li><a href="home.php?vol=2#vol-jual">PPN Lamongan</a>
+                            <li><a href="home.php?vol=2#vol-jual">PPN Brondong Lamongan</a>
                             </li> 
-                            <li><a href="home.php?vol=3#vol-jual">PPN Indramayu</a>
+                            <li><a href="home.php?vol=3#vol-jual">PPN Karangsong Indramayu</a>
                             </li>
                             <li><a href="home.php?vol=4#vol-jual">PPS Cilacap</a>
                             </li>
-                            <li><a href="home.php?vol=5#vol-jual">PPN Sukabumi</a>
+                            <li><a href="home.php?vol=5#vol-jual">PPN Pelabuhanratu Sukabumi</a>
                             </li>
-                            <li><a href="home.php?vol=6#vol-jual">PPP Gunung Kidul</a>
+                            <li><a href="home.php?vol=6#vol-jual">PPP Sadeng Gunung Kidul</a>
                             </li>
                             <li><a href="home.php?vol=7#vol-jual">PPN Pekalongan</a>
                         </ul>
@@ -543,17 +543,17 @@ if (isset($_GET['vol'])) {
                             <li><a href="home.php?vol=total&harga=total#harga">Total</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="home.php?vol=1#harga">PPN Trenggalek</a>
+                            <li><a href="home.php?vol=1#harga">PPN Prigi Trenggalek</a>
                             </li>
-                            <li><a href="home.php?vol=2#harga">PPN Lamongan</a>
+                            <li><a href="home.php?vol=2#harga">PPN Brondong Lamongan</a>
                             </li> 
-                            <li><a href="home.php?vol=3#harga">PPN Indramayu</a>
+                            <li><a href="home.php?vol=3#harga">PPN Karangsong Indramayu</a>
                             </li>
                             <li><a href="home.php?vol=4#harga">PPS Cilacap</a>
                             </li>
-                            <li><a href="home.php?vol=5#harga">PPN Sukabumi</a>
+                            <li><a href="home.php?vol=5#harga">PPN Pelabuhanratu Sukabumi</a>
                             </li>
-                            <li><a href="home.php?vol=6#harga">PPP Gunung Kidul</a>
+                            <li><a href="home.php?vol=6#harga">PPP Sadeng Gunung Kidul</a>
                             </li>
                             <li><a href="home.php?vol=7#harga">PPN Pekalongan</a>
                         </ul>
@@ -759,7 +759,7 @@ if (isset($_GET['vol'])) {
                     xkey: 'tanggal',
                     ykeys: ['vr3'],
                     xLabels: 'day',
-                    labels: ['Volume Tangkap '],
+                    labels: ['Volume Jual '],
                     postUnits : ' Kg',       
                     behaveLikeLine: true
                 <?php }?>
