@@ -12,7 +12,7 @@
 
     <title>Sistem Informasi Perikanan Tangkap</title>
 
-    <!-- favicon -->
+    <!-- favicon (gambar ikan)--> 
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 
     <!-- Bootstrap Core CSS -->
@@ -42,8 +42,10 @@
     <![endif]-->
 
 </head>
+
 <?php
 include "data.php";
+//memasukkan data.php. didalmanya banyak f
 include 'news.php';
 if (isset($_GET['vol'])) {
     switch ($_GET['vol']) {
@@ -141,8 +143,8 @@ if (isset($_GET['vol'])) {
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
           </ol>
+		  
           <div class="carousel-inner" role="listbox">
-
                 <div class="item active">
                   <img class="first-slide" src="img/slide1.jpg" alt="First slide">
                   <div class="container">
@@ -197,6 +199,7 @@ if (isset($_GET['vol'])) {
           </a>
     </div><!-- /.carousel -->
 
+	
     </header>
 
    
