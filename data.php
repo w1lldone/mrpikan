@@ -25,6 +25,9 @@
 			$counts=mysql_num_rows($qq);		
 			if ($counts!=0){
 				while ($row=mysql_fetch_assoc($qq)){
+					$keys=array_keys($row);
+					$key=$keys[1];
+					$row["$key"]=round($row["$key"]);
 					$hasil[]=$row;
 				}
 				
@@ -40,6 +43,9 @@
 		$counts=mysql_num_rows($qq);		
 		if ($counts!=0){
 			while ($row=mysql_fetch_assoc($qq)){
+				$keys=array_keys($row);
+				$key=$keys[1];
+				$row["$key"]=round($row["$key"]);
 				$hasil[]=$row;
 			}
 			return json_encode($hasil);
