@@ -450,7 +450,7 @@ if (isset($_GET['vol'])) {
 
     <!-- grafik vol tangkap -->
     <section id="grafik">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Volume Ikan Tangkap</h2>
@@ -481,7 +481,7 @@ if (isset($_GET['vol'])) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <div id="grafik-vol"></div>
                 </div>         
             </div>
@@ -521,7 +521,7 @@ if (isset($_GET['vol'])) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-sm-12">
                     <div id="grafik-vol-jual"></div>
                 </div>         
             </div>
@@ -561,7 +561,7 @@ if (isset($_GET['vol'])) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-sm-12">
                     <div id="grafik-harga"></div>
                 </div>                
             </div>
@@ -716,7 +716,8 @@ if (isset($_GET['vol'])) {
                     ykeys: ['sum(vr1)'],
                     xLabels: 'day',
                     labels: ['Volume Tangkap '],
-                    postUnits : ' Kg',       
+                    postUnits : ' Kg',
+                    resize : true,       
                     behaveLikeLine: true
                 <?php }?>
 
@@ -730,7 +731,8 @@ if (isset($_GET['vol'])) {
                     ykeys: ['vr1'],
                     xLabels: 'day',
                     labels: ['Volume Tangkap '],
-                    postUnits : ' Kg',       
+                    postUnits : ' Kg',      
+                    resize : true,  
                     behaveLikeLine: true
                 <?php }?>
             });
@@ -747,6 +749,7 @@ if (isset($_GET['vol'])) {
                     xLabels: 'day',
                     labels: ['Volume Jual '],
                     postUnits : ' Kg',       
+                    resize : true, 
                     behaveLikeLine: true
                 <?php }?>
 
@@ -760,7 +763,8 @@ if (isset($_GET['vol'])) {
                     ykeys: ['vr3'],
                     xLabels: 'day',
                     labels: ['Volume Jual '],
-                    postUnits : ' Kg',       
+                    postUnits : ' Kg',    
+                    resize : true,    
                     behaveLikeLine: true
                 <?php }?>
             });
@@ -776,7 +780,8 @@ if (isset($_GET['vol'])) {
                     ykeys: ['avg(hr2)'],
                     xLabels: 'day',
                     labels: ['Harga Ikan'],
-                    preUnits : 'Rp. ',        
+                    preUnits : 'Rp. ',    
+                    resize : true,     
                     behaveLikeLine: true
                 <?php } ?>
 
@@ -790,7 +795,8 @@ if (isset($_GET['vol'])) {
                     ykeys: ['hr2'],
                     xLabels: 'day',
                     labels: ['Harga Ikan'],
-                    preUnits : 'Rp. ',        
+                    preUnits : 'Rp. ',     
+                    resize : true,    
                     behaveLikeLine: true
                 <?php } ?>
             });
