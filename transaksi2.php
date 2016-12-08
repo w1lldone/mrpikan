@@ -42,7 +42,7 @@
 											}?>									
 											</select>	
                                         </div>
-                                        <label>Pemilik Kapal</label> 
+                                        <label>Pemodal Kapal</label> 
                                         <div class="form-group input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-user">
@@ -154,7 +154,7 @@
                                             }?>                                 
                                             </select>   
                                         </div>
-                                        <label>Pemilik Kapal</label> 
+                                        <label>Pemodal Kapal</label> 
                                         <div class="form-group input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-user">

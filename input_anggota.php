@@ -37,7 +37,7 @@
 			window.location=('modul.php?isi=tabel_n')</script>";
 		}
 
-		//input pemilik kapal
+		//input pemodal kapal
 		if ($_GET['act']=='inputpk') {
 			mysql_query("INSERT INTO p_kapal(nama, no_hp, alamat, idsk)
 				VALUES(
@@ -50,7 +50,7 @@
 			window.location=('modul.php?isi=tabel_pk')</script>";
 		}
 
-		//edit pemilik kapal
+		//edit pemodal kapal
 		if ($_GET['act']=='editpk') {
 			mysql_query("update p_kapal set 
 			nama='$_POST[nama]', 
@@ -63,7 +63,7 @@
 			window.location=('modul.php?isi=tabel_pk')</script>";
 		}
 
-		//hapus pemilik kapal
+		//hapus pemodal kapal
 		if ($_GET['act']=='hapuspk') {
 			mysql_query("delete from p_kapal where idpk = $_GET[id]");
 

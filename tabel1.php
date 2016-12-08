@@ -20,7 +20,7 @@
                                     <thead>
                                         <tr>
                                             <th>Tanggal</th>
-                                            <th>Pemilik Kapal</th>
+                                            <th>Pemodal Kapal</th>
                                             <th>Biaya P. Kapal(Rp/kg)</th>
                                             <th>Nelayan</th>
                                             <th>Biaya Nelayan(Rp/kg)</th>

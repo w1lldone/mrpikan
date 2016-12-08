@@ -71,7 +71,7 @@
 ?>
 <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <h1 class="page-header">Edit Anggota Pemilik Kapal</h1>
+                    <h1 class="page-header">Edit Anggota Pemodal Kapal</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

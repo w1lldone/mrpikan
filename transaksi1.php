@@ -44,7 +44,7 @@
                                             <input type="text" class="form-control" placeholder="Biaya Nelayan total" name="b_nelayan">
                                             <span class="input-group-addon">.00</span>
                                         </div>
-                                        <label>Pemilik Kapal</label>
+                                        <label>Pemodal Kapal</label>
 										 <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                             <select class="form-control" name="pengepul">							
@@ -60,7 +60,7 @@
                                             <div class="col-xs-7">
                                                 <div class="form-group input-group">
                                                     <span class="input-group-addon">Rp</span>
-                                                    <input type="text" class="form-control" placeholder="Biaya Pemilik Kapal total" name="b_pengepul">
+                                                    <input type="text" class="form-control" placeholder="Biaya Pemodal Kapal total" name="b_pengepul">
                                                     <span class="input-group-addon">.00</span>
                                                 </div>
                                             </div>
@@ -155,7 +155,7 @@
                                             <input type="text" class="form-control" placeholder="Biaya Nelayan total" name="b_nelayan" value="<?php echo $bn; ?>">
                                             <span class="input-group-addon">.00</span>
                                         </div>
-                                        <label>Pemilik Kapal</label>
+                                        <label>Pemodal Kapal</label>
                                          <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                             <select class="form-control" name="pengepul">
@@ -172,7 +172,7 @@
                                             <div class="col-xs-7">
                                                 <div class="form-group input-group">
                                                     <span class="input-group-addon">Rp</span>
-                                                    <input type="text" class="form-control" placeholder="Biaya Pemilik Kapal total" name="b_pengepul" value="<?php echo $bp;?>">
+                                                    <input type="text" class="form-control" placeholder="Biaya Pemodal Kapal total" name="b_pengepul" value="<?php echo $bp;?>">
                                                     <span class="input-group-addon">.00</span>
                                                 </div>
                                             </div>

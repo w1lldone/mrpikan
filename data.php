@@ -59,7 +59,7 @@
 		$qa=mysql_query($sqla) or die(mysql_error());
 		$rowa=mysql_fetch_array($qa);
 
-		// menghitung nilai share margin nelayan, pemilik kapal, dan pedagang
+		// menghitung nilai share margin nelayan, pemodal kapal, dan pedagang
 		$sm_nel=($rowa['avg(hr1)']-$rowa['avg(br1)'])/$rowa['avg(hr3)'];
 		$sm_pk=($rowa['avg(hr2)']-$rowa['avg(br2)']-$rowa['avg(hr1)'])/$rowa['avg(hr3)'];
 		$sm_pd=($rowa['avg(hr3)']-$rowa['avg(br3)']-$rowa['avg(hr2)'])/$rowa['avg(hr3)'];

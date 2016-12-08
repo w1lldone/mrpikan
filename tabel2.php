@@ -20,7 +20,7 @@
                                     <thead>
                                         <tr>
                                             <th>Tanggal</th>
-                                            <th>Pemilik Kapal</th>
+                                            <th>Pemodal Kapal</th>
                                             <th>Pedagang</th>
                                             <th>Harga Jual(Rp/kg)</th>
                                             <th>Volume(kg)</th>

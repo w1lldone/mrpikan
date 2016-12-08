@@ -169,7 +169,7 @@ else if($level=='admin'){ ?>
                     <a href="modul.php?isi=tabel_n"><i class="fa fa-anchor fa-fw"></i> Data Nelayan</a>
                 </li> 
                 <li>
-                    <a href="modul.php?isi=tabel_pk"><i class="fa fa-user fa-fw"></i> Data Pemilik Kapal</a>
+                    <a href="modul.php?isi=tabel_pk"><i class="fa fa-user fa-fw"></i> Data Pemodal Kapal</a>
                 </li>
                 <li>
                     <a href="modul.php?isi=tabel_pd"><i class="fa fa-money fa-fw"></i> Data Pedagang</a>
@@ -327,7 +327,7 @@ else if($level=='admin'){ ?>
             label: "SM pedagang",
             value: <?php echo hasil("select sm_pd from margin")*100; ?>
         }, {
-            label: "SM Pemilik Kapal",
+            label: "SM Pemodal Kapal",
             value: <?php echo hasil("select sm_pk from margin")*100; ?>
         }, {
             label: "Biaya Total",
