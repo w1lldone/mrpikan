@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 21 Sep 2016 pada 07.03
+-- Generation Time: 30 Mar 2017 pada 18.55
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -20,6 +20,22 @@ SET time_zone = "+00:00";
 -- Database: `mrp_ikan`
 --
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `laporan`
+--
+
+CREATE TABLE IF NOT EXISTS `laporan` (
+  `idl` int(6) NOT NULL,
+  `idsk` int(6) NOT NULL,
+  `tanggal` varchar(10) DEFAULT NULL,
+  `idpd` int(6) NOT NULL,
+  `b3` int(10) DEFAULT NULL,
+  `h3` int(10) DEFAULT NULL,
+  `vol` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `laporan`
 --
@@ -35,12 +51,52 @@ INSERT INTO `laporan` (`idl`, `idsk`, `tanggal`, `idpd`, `b3`, `h3`, `vol`) VALU
 (8, 5, '2016-09-18', 10, 8000, 18500, 1000),
 (9, 7, '2016-09-18', 13, 2340, 21500, 23000);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `margin`
+--
+
+CREATE TABLE IF NOT EXISTS `margin` (
+  `idpm` int(11) NOT NULL,
+  `sm_nel` decimal(3,3) DEFAULT NULL,
+  `sm_pk` decimal(3,3) DEFAULT NULL,
+  `sm_pd` decimal(3,3) DEFAULT NULL,
+  `ps_biaya` decimal(3,3) DEFAULT NULL,
+  `pm_nel` decimal(3,3) DEFAULT NULL,
+  `pm_pk` decimal(3,3) DEFAULT NULL,
+  `pm_pd` decimal(3,3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `margin`
 --
 
 INSERT INTO `margin` (`idpm`, `sm_nel`, `sm_pk`, `sm_pd`, `ps_biaya`, `pm_nel`, `pm_pk`, `pm_pd`) VALUES
-(1, '0.061', '0.061', '0.149', '0.729', '0.115', '0.094', '0.149');
+(1, '0.084', '0.071', '0.159', '0.686', '0.162', '0.111', '0.159');
+
+--
+-- Trigger `margin`
+--
+DELIMITER $$
+CREATE TRIGGER `ps_harga` BEFORE UPDATE ON `margin`
+ FOR EACH ROW set new.ps_biaya = 1 - new.sm_nel - new.sm_pk - new.sm_pd
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `nelayan`
+--
+
+CREATE TABLE IF NOT EXISTS `nelayan` (
+  `idn` int(6) NOT NULL,
+  `nama` varchar(30) DEFAULT NULL,
+  `no_hp` varchar(15) DEFAULT NULL,
+  `alamat` varchar(50) DEFAULT NULL,
+  `idsk` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `nelayan`
@@ -68,6 +124,20 @@ INSERT INTO `nelayan` (`idn`, `nama`, `no_hp`, `alamat`, `idsk`) VALUES
 (23, 'Nelayan 19', NULL, 'Gunung Kidul', 6),
 (24, 'Nelayan 20', NULL, 'Pekalongan', 7);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pedagang`
+--
+
+CREATE TABLE IF NOT EXISTS `pedagang` (
+  `idpd` int(6) NOT NULL,
+  `nama` varchar(30) DEFAULT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `idsk` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `pedagang`
 --
@@ -93,6 +163,20 @@ INSERT INTO `pedagang` (`idpd`, `nama`, `no_hp`, `alamat`, `idsk`) VALUES
 (22, 'Pedagang 18', '', 'Cilacap', 4),
 (23, 'Pedagang 19', '', 'Cilacap', 4),
 (24, 'Pedagang 20', '', 'Sukabumi', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `p_kapal`
+--
+
+CREATE TABLE IF NOT EXISTS `p_kapal` (
+  `idpk` int(6) NOT NULL,
+  `nama` varchar(30) DEFAULT NULL,
+  `no_hp` varchar(15) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `idsk` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `p_kapal`
@@ -120,6 +204,28 @@ INSERT INTO `p_kapal` (`idpk`, `nama`, `no_hp`, `alamat`, `idsk`) VALUES
 (23, 'Pem. Kapal 19', '', 'Gunung Kidul', 6),
 (24, 'Pem. Kapal 20', '', 'Pekalongan', 7);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `rata`
+--
+
+CREATE TABLE IF NOT EXISTS `rata` (
+  `idr` int(6) NOT NULL,
+  `idsk` int(6) NOT NULL,
+  `tanggal` varchar(10) DEFAULT NULL,
+  `br1` int(10) DEFAULT NULL,
+  `br2` int(10) DEFAULT NULL,
+  `vr1` int(10) DEFAULT NULL,
+  `persen` decimal(2,2) DEFAULT NULL,
+  `hr2` int(10) DEFAULT NULL,
+  `vr3` int(10) DEFAULT NULL,
+  `hr1` int(10) DEFAULT NULL,
+  `br3` int(10) DEFAULT NULL,
+  `hr3` int(10) DEFAULT NULL,
+  `vr4` int(10) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `rata`
 --
@@ -130,14 +236,36 @@ INSERT INTO `rata` (`idr`, `idsk`, `tanggal`, `br1`, `br2`, `vr1`, `persen`, `hr
 (3, 3, '2016-09-17', 11599, 1427, 15000, '0.50', 13500, 15000, 11836, 3074, 19500, 5400),
 (4, 4, '2016-09-17', 6311, 825, 32500, '0.55', 12167, 32500, 8575, NULL, NULL, NULL),
 (7, 6, '2016-09-17', 10513, 1329, 1400, '0.50', 10500, 1400, 9842, 3182, 14000, 4200),
-(8, 7, '2016-09-17', 13751, 1086, 50000, '0.50', 13500, 50000, 13083, 6420, 21500, 2500),
+(8, 7, '2016-09-17', 6876, 544, 50001, '0.26', 13500, 50000, 11375, 6420, 21500, 2500),
 (9, 1, '2016-09-18', 3606, 1027, 12000, '0.50', 13000, 12000, 7790, NULL, NULL, NULL),
 (10, 2, '2016-09-18', 5217, 608, 25000, '0.50', 12133, 24000, 8371, 1185, 16000, 300000),
 (11, 3, '2016-09-18', 12071, 1426, 45000, '0.50', 14500, 45000, 12573, NULL, NULL, NULL),
 (12, 4, '2016-09-18', 4857, 660, 35000, '0.55', 1175, 35000, 2903, 3644, 20000, 3500),
 (16, 5, '2016-09-17', 10379, 928, 4000, '0.50', 13000, 4000, 11226, NULL, NULL, NULL),
 (17, 5, '2016-09-18', 10797, 1283, 13000, '0.50', 14500, 13000, 12007, 8000, 18500, 1000),
-(18, 7, '2016-09-18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2340, 21500, 23000);
+(18, 7, '2016-09-18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2340, 21500, 23000),
+(19, 4, '2016-10-18', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3644, 20000, 3500);
+
+--
+-- Trigger `rata`
+--
+DELIMITER $$
+CREATE TRIGGER `rata_h1` BEFORE UPDATE ON `rata`
+ FOR EACH ROW set new.hr1 = ((new.hr2 - new.br1 - new.br2)*(1 - new.persen))+ new.br1
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `sektor`
+--
+
+CREATE TABLE IF NOT EXISTS `sektor` (
+  `idsk` int(6) NOT NULL,
+  `nama` varchar(30) DEFAULT NULL,
+  `alamat` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `sektor`
@@ -151,6 +279,24 @@ INSERT INTO `sektor` (`idsk`, `nama`, `alamat`) VALUES
 (5, 'PPN Palabuhanratu Sukabumi', 'JL. Siliwangi, PO BOX 22, Pelabuhan Ratu, Sukabumi, 43364'),
 (6, 'PPP Sadeng Gunung Kidul', 'Songbanyu, Girisubo, Gunung Kidul, DIY 55883'),
 (7, 'PPN Pekalongan', 'l. WR Supratman No.1, Panjang Wetan, Pekalongan Utara');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `transaksi1`
+--
+
+CREATE TABLE IF NOT EXISTS `transaksi1` (
+  `idt1` int(6) NOT NULL,
+  `tanggal` varchar(10) DEFAULT NULL,
+  `idsk` int(6) NOT NULL,
+  `idn` int(6) DEFAULT NULL,
+  `idpk` int(6) DEFAULT NULL,
+  `b1` int(10) DEFAULT NULL,
+  `b2` int(10) DEFAULT NULL,
+  `vol` int(10) DEFAULT NULL,
+  `persen` decimal(2,2) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `transaksi1`
@@ -178,6 +324,22 @@ INSERT INTO `transaksi1` (`idt1`, `tanggal`, `idsk`, `idn`, `idpk`, `b1`, `b2`, 
 (22, '2016-09-18', 5, 21, 21, 14194, 1930, 1000, '0.50'),
 (23, '2016-09-18', 5, 22, 22, 7400, 635, 12000, '0.50');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `transaksi2`
+--
+
+CREATE TABLE IF NOT EXISTS `transaksi2` (
+  `idt2` int(6) NOT NULL,
+  `tanggal` varchar(10) DEFAULT NULL,
+  `idsk` int(6) NOT NULL,
+  `idpd` int(6) DEFAULT NULL,
+  `idpk` int(6) NOT NULL,
+  `h2` int(10) DEFAULT NULL,
+  `v3` int(10) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `transaksi2`
 --
@@ -204,6 +366,20 @@ INSERT INTO `transaksi2` (`idt2`, `tanggal`, `idsk`, `idpd`, `idpk`, `h2`, `v3`)
 (22, '2016-09-18', 5, 10, 21, 14000, 1000),
 (23, '2016-09-18', 5, 24, 22, 15000, 12000);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` varchar(20) NOT NULL,
+  `pass` varchar(100) DEFAULT NULL,
+  `nama` varchar(30) DEFAULT NULL,
+  `privilage` varchar(10) NOT NULL,
+  `idsk` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Dumping data untuk tabel `user`
 --
@@ -217,6 +393,159 @@ INSERT INTO `user` (`id`, `pass`, `nama`, `privilage`, `idsk`) VALUES
 ('pekalongan', '4082dc484ef4b1e8e0f195fec6b495ec', 'PPN Pekalongan', 'tpi', 7),
 ('sukabumi', '51dc3ff204683f720867ec8bb430f860', 'PPN palabuhanratu', 'tpi', 5),
 ('trenggalek', 'fdb6c80390c124b26bc3c7794e821905', 'PPN Trenggalek', 'tpi', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `nelayan`
+--
+ALTER TABLE `nelayan`
+  ADD PRIMARY KEY (`idn`),
+  ADD KEY `idsk` (`idsk`);
+
+--
+-- Indexes for table `pedagang`
+--
+ALTER TABLE `pedagang`
+  ADD PRIMARY KEY (`idpd`),
+  ADD KEY `idsk` (`idsk`);
+
+--
+-- Indexes for table `p_kapal`
+--
+ALTER TABLE `p_kapal`
+  ADD PRIMARY KEY (`idpk`),
+  ADD KEY `idsk` (`idsk`);
+
+--
+-- Indexes for table `rata`
+--
+ALTER TABLE `rata`
+  ADD PRIMARY KEY (`idr`),
+  ADD KEY `idsk` (`idsk`);
+
+--
+-- Indexes for table `sektor`
+--
+ALTER TABLE `sektor`
+  ADD PRIMARY KEY (`idsk`);
+
+--
+-- Indexes for table `transaksi1`
+--
+ALTER TABLE `transaksi1`
+  ADD PRIMARY KEY (`idt1`),
+  ADD KEY `idn` (`idn`),
+  ADD KEY `idpg` (`idpk`),
+  ADD KEY `idsk` (`idsk`),
+  ADD KEY `idsk_2` (`idsk`);
+
+--
+-- Indexes for table `transaksi2`
+--
+ALTER TABLE `transaksi2`
+  ADD PRIMARY KEY (`idt2`),
+  ADD KEY `idpd` (`idpd`),
+  ADD KEY `idsk` (`idsk`),
+  ADD KEY `idpk` (`idpk`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idsk` (`idsk`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `nelayan`
+--
+ALTER TABLE `nelayan`
+  MODIFY `idn` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT for table `pedagang`
+--
+ALTER TABLE `pedagang`
+  MODIFY `idpd` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT for table `p_kapal`
+--
+ALTER TABLE `p_kapal`
+  MODIFY `idpk` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT for table `rata`
+--
+ALTER TABLE `rata`
+  MODIFY `idr` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `sektor`
+--
+ALTER TABLE `sektor`
+  MODIFY `idsk` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `transaksi1`
+--
+ALTER TABLE `transaksi1`
+  MODIFY `idt1` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `transaksi2`
+--
+ALTER TABLE `transaksi2`
+  MODIFY `idt2` int(6) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `nelayan`
+--
+ALTER TABLE `nelayan`
+  ADD CONSTRAINT `nelayan_sektor` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `pedagang`
+--
+ALTER TABLE `pedagang`
+  ADD CONSTRAINT `pedagang_sektor` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `p_kapal`
+--
+ALTER TABLE `p_kapal`
+  ADD CONSTRAINT `pkapal_sektor` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `rata`
+--
+ALTER TABLE `rata`
+  ADD CONSTRAINT `rata_idsk` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `transaksi1`
+--
+ALTER TABLE `transaksi1`
+  ADD CONSTRAINT `transaksi1_ibfk_1` FOREIGN KEY (`idn`) REFERENCES `nelayan` (`idn`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transaksi1_ibfk_2` FOREIGN KEY (`idpk`) REFERENCES `p_kapal` (`idpk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transaksi1_idsk` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `transaksi2`
+--
+ALTER TABLE `transaksi2`
+  ADD CONSTRAINT `transaksi2_ibfk_1` FOREIGN KEY (`idpd`) REFERENCES `pedagang` (`idpd`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transaksi2_idsk` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transaksi_idpk` FOREIGN KEY (`idpk`) REFERENCES `p_kapal` (`idpk`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_sk` FOREIGN KEY (`idsk`) REFERENCES `sektor` (`idsk`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
